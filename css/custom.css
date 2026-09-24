@@ -154,29 +154,9 @@ a:hover { color: var(--gold); }
   color: var(--navy) !important;
 }
 
-/* Two-line link: template download + "sent during registration" hint */
-.nav-link-stack {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-@media (min-width: 1200px) {
-  .nav-link { white-space: nowrap; }
-}
-
-.nav-link-stack i { font-size: 0.8em; color: var(--gold); }
-
-.nav-link-stack small {
-  font-size: 0.68rem;
-  color: var(--gold);
-  letter-spacing: 0.02em;
-}
-
 @media (min-width: 1200px) {
   .navbar-nav { align-items: center; }
-  .nav-link-stack { align-items: center; }
-  .nav-link { padding: 0.4rem 0.6rem !important; }
+  .nav-link { padding: 0.4rem 0.6rem !important; white-space: nowrap; }
 
   .nav-link::after {
     content: '';
@@ -192,12 +172,6 @@ a:hover { color: var(--gold); }
 
   .nav-link:hover::after,
   .nav-link.active::after { transform: scaleX(1); }
-}
-
-/* Narrow desktops: tighten links so brand + 8 links + language switch fit */
-@media (min-width: 1200px) and (max-width: 1399.98px) {
-  .nav-link { font-size: 0.86rem; padding: 0.4rem 0.45rem !important; }
-  .nav-link::after { left: 0.45rem; right: 0.45rem; }
 }
 
 @media (max-width: 1199.98px) {
