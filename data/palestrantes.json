@@ -1,0 +1,23 @@
+{
+  "publicado": false,
+  "palestrantes": [
+    {
+      "id": "exemplo-1",
+      "nome": "Nome do Pesquisador",
+      "instituicao": "Universidade / Instituição",
+      "pais": "Brasil",
+      "foto": "assets/palestrantes/exemplo-1.jpg",
+      "bio": "Mini currículo com duas ou três frases sobre a trajetória e a linha de pesquisa.",
+      "link": "https://lattes.cnpq.br/"
+    },
+    {
+      "id": "exemplo-2",
+      "nome": "Nome da Pesquisadora",
+      "instituicao": "University / Institution",
+      "pais": "Estados Unidos",
+      "foto": "",
+      "bio": "Sem foto: o site exibe as iniciais no lugar.",
+      "link": ""
+    }
+  ]
+}
