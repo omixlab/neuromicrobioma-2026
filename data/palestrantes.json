@@ -1,22 +1,87 @@
 {
-  "publicado": false,
+  "publicado": true,
   "palestrantes": [
     {
-      "id": "exemplo-1",
-      "nome": "Nome do Pesquisador",
-      "instituicao": "Universidade / Instituição",
-      "pais": "Brasil",
-      "foto": "assets/palestrantes/exemplo-1.jpg",
-      "bio": "Mini currículo com duas ou três frases sobre a trajetória e a linha de pesquisa.",
-      "link": "https://lattes.cnpq.br/"
+      "id": "jacob-allen",
+      "tratamento": "Dr.",
+      "nome": "Jacob Allen",
+      "instituicao": "University of Illinois Urbana-Champaign (UIUC)",
+      "pais": { "pt": "EUA", "en": "USA" },
+      "foto": "assets/palestrantes/jacob-allen.jpg",
+      "bio": "",
+      "link": ""
     },
     {
-      "id": "exemplo-2",
-      "nome": "Nome da Pesquisadora",
-      "instituicao": "University / Institution",
-      "pais": "Estados Unidos",
-      "foto": "",
-      "bio": "Sem foto: o site exibe as iniciais no lugar.",
+      "id": "fernanda-pedrotti-moreira",
+      "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
+      "nome": "Fernanda Pedrotti Moreira",
+      "instituicao": "Universidade Católica de Pelotas (UCPel)",
+      "foto": "assets/palestrantes/fernanda-pedrotti-moreira.jpg",
+      "bio": "",
+      "link": ""
+    },
+    {
+      "id": "maria-elisa-caetano-silva",
+      "tratamento": { "pt": "Dra.", "en": "Dr." },
+      "nome": "Maria Elisa Caetano-Silva",
+      "instituicao": "University of Illinois Urbana-Champaign (UIUC)",
+      "pais": { "pt": "EUA", "en": "USA" },
+      "foto": "assets/palestrantes/maria-elisa-caetano-silva.jpg",
+      "bio": "",
+      "link": ""
+    },
+    {
+      "id": "paloma-taborda-birmann",
+      "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
+      "nome": "Paloma Taborda Birmann",
+      "instituicao": "Universidade Federal do Rio Grande (FURG)",
+      "foto": "assets/palestrantes/paloma-taborda-birmann.jpg",
+      "bio": "",
+      "link": ""
+    },
+    {
+      "id": "luciana-tovo-rodrigues",
+      "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
+      "nome": "Luciana Tovo Rodrigues",
+      "instituicao": "Universidade Federal de Pelotas (UFPel)",
+      "foto": "assets/palestrantes/luciana-tovo-rodrigues.jpg",
+      "bio": "",
+      "link": ""
+    },
+    {
+      "id": "marina-carpena",
+      "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
+      "nome": "Marina Carpena",
+      "instituicao": "Universidade Federal de Pelotas (UFPel)",
+      "foto": "assets/palestrantes/marina-carpena.jpg",
+      "bio": "",
+      "link": ""
+    },
+    {
+      "id": "roberta-malaguez",
+      "tratamento": { "pt": "Dra.", "en": "Dr." },
+      "nome": "Roberta Malaguêz",
+      "instituicao": "",
+      "foto": "assets/palestrantes/roberta-malaguez.jpg",
+      "bio": "",
+      "link": ""
+    },
+    {
+      "id": "luiza-souza-marques",
+      "tratamento": { "pt": "Dra.", "en": "Dr." },
+      "nome": "Luiza de Souza Marques",
+      "instituicao": "Universidade Federal de Santa Maria (UFSM)",
+      "foto": "assets/palestrantes/luiza-souza-marques.jpg",
+      "bio": "",
+      "link": ""
+    },
+    {
+      "id": "simone-pinton",
+      "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
+      "nome": "Simone Pinton",
+      "instituicao": "Universidade Federal do Pampa (UNIPAMPA)",
+      "foto": "assets/palestrantes/simone-pinton.jpg",
+      "bio": "",
       "link": ""
     }
   ]

@@ -5,28 +5,40 @@ O site lê dois arquivos desta pasta. Basta editá-los (inclusive direto pelo Gi
 | Arquivo | Conteúdo |
 |---|---|
 | `palestrantes.json` | Lista de palestrantes (nome, instituição, foto, mini currículo) |
-| `programacao.json` | Dias e atividades (palestras, mesas, pitch, pôsteres, intervalos…) |
+| `programacao.json` | Dias e atividades (palestras, pitch, pôsteres, intervalos…) |
 
-Enquanto `"publicado": false`, a seção mostra "em breve". Troque para `true` quando o conteúdo estiver pronto.
+Enquanto `"publicado": false`, a seção mostra "em breve". Com `true`, o conteúdo aparece no site.
+
+## Português e inglês
+
+O site tem versão em português e em inglês (botões ENG / PT-BR na navbar). Qualquer texto destes arquivos pode ser:
+
+- um texto único, igual nos dois idiomas: `"titulo": "Coffee break"`
+- um par de traduções: `"titulo": { "pt": "Solenidade de abertura", "en": "Opening ceremony" }`
+
+Se faltar o `"en"`, o site mostra o texto em português.
 
 ## palestrantes.json
 
 ```json
 {
   "id": "maria-silva",
-  "nome": "Dra. Maria Silva",
-  "instituicao": "Universidade Federal de Pelotas",
-  "pais": "Brasil",
+  "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
+  "nome": "Maria Silva",
+  "instituicao": "Universidade Federal de Pelotas (UFPel)",
+  "pais": { "pt": "EUA", "en": "USA" },
   "foto": "assets/palestrantes/maria-silva.jpg",
-  "bio": "Mini currículo em duas ou três frases.",
+  "bio": { "pt": "Mini currículo.", "en": "Short bio." },
   "link": "https://lattes.cnpq.br/..."
 }
 ```
 
 - `id`: identificador único, sem espaços ou acentos. É usado na programação.
-- `foto`: caminho de uma imagem em `assets/palestrantes/` ou um endereço `https://…`. Use fotos quadradas (ex.: 400×400 px). Se ficar vazio ou o arquivo não existir, o site mostra as iniciais.
+- `tratamento` (opcional): aparece antes do nome.
+- `pais` (opcional): use só para palestrantes de fora do Brasil.
+- `foto`: caminho de uma imagem em `assets/palestrantes/` ou um endereço `https://…`. Use fotos quadradas (ex.: 400×400 px). Os caminhos já estão preenchidos: basta enviar a foto com o nome indicado. Enquanto o arquivo não existir, o site mostra as iniciais.
 - O GitHub Pages diferencia maiúsculas de minúsculas: `Maria.JPG` ≠ `maria.jpg`.
-- `link` (opcional): Lattes, site ou perfil acadêmico.
+- `bio` e `link` (opcionais): mini currículo e Lattes, site ou perfil acadêmico.
 - O título da palestra **não** vai aqui: ele vem da programação e aparece automaticamente no card do palestrante.
 
 ## programacao.json
@@ -34,23 +46,31 @@ Enquanto `"publicado": false`, a seção mostra "em breve". Troque para `true` q
 ```json
 {
   "data": "2026-11-17",
+  "tema": { "pt": "Tema do dia", "en": "Theme of the day" },
   "atividades": [
     {
       "inicio": "09:30",
       "fim": "10:30",
       "tipo": "palestra",
-      "titulo": "Título da palestra",
+      "titulo": { "pt": "Título da palestra", "en": "Talk title" },
       "palestrantes": ["maria-silva"],
       "descricao": "Opcional",
       "local": "Opcional"
-    }
+    },
+    { "inicio": "10:30", "fim": "10:35", "tipo": "discussao" }
   ]
 }
 ```
 
 - `data` no formato `AAAA-MM-DD`. O dia da semana é calculado automaticamente.
-- `tipo`: `palestra`, `mesa-redonda`, `pitch`, `poster`, `abertura`, `encerramento`, `intervalo`, `credenciamento` ou `outro`.
+- `tema` (opcional): subtítulo do dia.
+- `tipo`: `credenciamento`, `abertura`, `palestra`, `discussao`, `mesa-redonda`, `pitch`, `poster`, `intervalo`, `encerramento` ou `outro`.
+- `titulo` pode ficar de fora; nesse caso aparece o nome do tipo (ex.: "Discussão"). As discussões aparecem numa linha compacta.
 - `palestrantes`: lista de `id`s do `palestrantes.json` (pode ter mais de um, ou ficar de fora).
+
+## Textos fixos da página
+
+Os demais textos estão no `index.html` (português) e em `js/i18n.js` (inglês). Um elemento com `data-i18n="chave"` recebe o texto em inglês da chave de mesmo nome.
 
 ## Dicas
 

@@ -3,13 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NeuroMicrobioma 2026 | 1º Simpósio sobre Microbioma, Eixo Intestino-Cérebro e Saúde Mental</title>
-  <meta name="description" content="1º Simpósio sobre Microbioma, Eixo Intestino-Cérebro e Saúde Mental. 17 e 18 de novembro de 2026, UFPel — Campus Capão do Leão. Inscrição gratuita, pôsteres e Scientific Pitch.">
-  <meta name="keywords" content="NeuroMicrobioma, Microbioma, Eixo Intestino-Cérebro, Saúde Mental, Neurociência, UFPel, Pelotas, Simpósio, Biotecnologia">
+  <title data-i18n="meta.title">NeuroMicrobioma 2026 | 1º Simpósio sobre Microbioma, Eixo Intestino-Cérebro e Saúde Mental</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="1º Simpósio sobre Microbioma, Eixo Intestino-Cérebro e Saúde Mental. 17 e 18 de novembro de 2026, UFPel — Campus Capão do Leão. Inscrição gratuita, pôsteres e Scientific Pitch.">
+  <meta name="keywords" content="NeuroMicrobioma, Microbioma, Eixo Intestino-Cérebro, Saúde Mental, Neurociência, UFPel, Pelotas, Simpósio, Biotecnologia, Microbiome, Gut-Brain Axis">
+
+  <!-- Language versions (js/i18n.js reads ?lang=en) -->
+  <link rel="alternate" hreflang="pt-BR" href="https://omixlab.github.io/neuromicrobioma-2026/">
+  <link rel="alternate" hreflang="en" href="https://omixlab.github.io/neuromicrobioma-2026/?lang=en">
 
   <!-- Social sharing (Instagram, WhatsApp etc. need absolute URLs) -->
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="NeuroMicrobioma 2026">
   <meta property="og:description" content="1º Simpósio sobre Microbioma, Eixo Intestino-Cérebro e Saúde Mental · 17 e 18 de novembro de 2026 · UFPel">
   <meta property="og:url" content="https://omixlab.github.io/neuromicrobioma-2026/">
@@ -36,29 +41,34 @@
 <body>
 
   <!-- ==================== NAVBAR ==================== -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-xl fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#inicio">NeuroMicrobioma <span class="brand-year">2026</span></a>
 
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Alternar navegação">
+      <div class="lang-switch order-xl-last" role="group" aria-label="Idioma / Language">
+        <button type="button" class="lang-btn" data-lang="en" lang="en" aria-pressed="false"><span class="flag" aria-hidden="true">🇺🇸</span>ENG</button>
+        <button type="button" class="lang-btn" data-lang="pt" lang="pt-BR" aria-pressed="true"><span class="flag" aria-hidden="true">🇧🇷</span>PT-BR</button>
+      </div>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Alternar navegação" data-i18n-attr="aria-label:nav.toggle">
         <i class="bi bi-list fs-2"></i>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarMain">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="#palestrantes">Palestrantes</a></li>
-          <li class="nav-item"><a class="nav-link" href="#programacao">Programação</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre" data-i18n="nav.sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#palestrantes" data-i18n="nav.palestrantes">Palestrantes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programacao" data-i18n="nav.programacao">Programação</a></li>
           <li class="nav-item">
-            <a class="nav-link nav-link-stack" href="assets/modelo_resumo_neuromicrobioma_2026.docx" download title="Baixar o modelo do resumo. O envio do resumo é feito no formulário de inscrição.">
-              <span>Modelo de resumo <i class="bi bi-download"></i></span>
-              <small>envio na inscrição</small>
+            <a class="nav-link nav-link-stack" href="assets/modelo_resumo_neuromicrobioma_2026.docx" download title="Baixar o modelo do resumo. O envio do resumo é feito no formulário de inscrição." data-i18n-attr="title:nav.modeloTitle">
+              <span><span data-i18n="nav.modelo">Modelo de resumo</span> <i class="bi bi-download"></i></span>
+              <small data-i18n="nav.modeloHint">envio na inscrição</small>
             </a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#inscricao">Inscrição</a></li>
-          <li class="nav-item"><a class="nav-link" href="#local">Local</a></li>
-          <li class="nav-item"><a class="nav-link" href="#comissao">Comissão</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="#inscricao" data-i18n="nav.inscricao">Inscrição</a></li>
+          <li class="nav-item"><a class="nav-link" href="#local" data-i18n="nav.local">Local</a></li>
+          <li class="nav-item"><a class="nav-link" href="#organizacao" data-i18n="nav.organizacao">Organização</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato" data-i18n="nav.contato">Contato</a></li>
         </ul>
       </div>
     </div>
@@ -69,21 +79,21 @@
     <div class="container">
       <div class="row align-items-center gy-5">
         <div class="col-lg-7">
-          <p class="eyebrow">1º Simpósio</p>
-          <h1 class="hero-title">Microbioma, Eixo Intestino-Cérebro e Saúde Mental</h1>
-          <p class="hero-tagline">Ciência que conecta. Saúde que transforma.</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">1º Simpósio</p>
+          <h1 class="hero-title">Neuro<span class="brand-year">Microbioma</span></h1>
+          <p class="hero-tagline" data-i18n="hero.tagline">Ciência que conecta. Saúde que transforma.</p>
 
           <ul class="hero-meta list-unstyled">
-            <li><i class="bi bi-calendar3"></i> 17 e 18 de novembro de 2026</li>
-            <li><i class="bi bi-geo-alt"></i> UFPel · Campus Capão do Leão, RS</li>
-            <li><i class="bi bi-ticket-perforated"></i> Inscrição gratuita · vagas limitadas</li>
+            <li><i class="bi bi-calendar3"></i> <span data-i18n="hero.date">17 e 18 de novembro de 2026</span></li>
+            <li><i class="bi bi-geo-alt"></i> <span data-i18n="hero.place">UFPel · Campus Capão do Leão, RS</span></li>
+            <li><i class="bi bi-ticket-perforated"></i> <span data-i18n="hero.free">Inscrição gratuita · vagas limitadas</span></li>
           </ul>
 
           <div class="d-flex flex-wrap gap-3">
             <a href="#inscricao" class="btn btn-primary-custom">
-              Inscreva-se <i class="bi bi-arrow-right ms-1"></i>
+              <span data-i18n="hero.cta">Inscreva-se</span> <i class="bi bi-arrow-right ms-1"></i>
             </a>
-            <a href="#submissao" class="btn btn-ghost">Chamada de trabalhos</a>
+            <a href="#submissao" class="btn btn-ghost" data-i18n="hero.cta2">Chamada de trabalhos</a>
           </div>
         </div>
 
@@ -103,27 +113,28 @@
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-4 reveal">
-          <p class="eyebrow">Visão geral</p>
-          <h2 class="section-title">Sobre o evento</h2>
+          <p class="eyebrow" data-i18n="sobre.eyebrow">Visão geral</p>
+          <h2 class="section-title" data-i18n="sobre.title">Sobre o evento</h2>
         </div>
         <div class="col-lg-8 reveal">
-          <p class="lead-text">Um encontro científico interdisciplinar dedicado às interfaces entre microbioma, intestino, cérebro e saúde mental.</p>
-          <p>O simpósio reúne pesquisadores nacionais e internacionais convidados, estudantes, professores e profissionais de diferentes áreas para trocar conhecimentos, experiências e perspectivas sobre as interações entre microbiota, organismo e sistema nervoso — estimulando o diálogo e a colaboração científica.</p>
+          <p class="lead-text" data-i18n="sobre.lead">Um encontro científico interdisciplinar dedicado às interfaces entre microbioma, intestino, cérebro e saúde mental.</p>
+          <p data-i18n="sobre.p1">O simpósio reúne pesquisadores nacionais e internacionais convidados, estudantes, professores e profissionais de diferentes áreas para trocar conhecimentos, experiências e perspectivas sobre as interações entre microbiota, organismo e sistema nervoso — estimulando o diálogo e a colaboração científica.</p>
+          <p data-i18n="sobre.p2">O evento integra a cooperação científica internacional entre a UFPel e a University of Illinois Urbana-Champaign, fortalecida pelo Prêmio Fulbright–ABC 2025 e pelo apoio da FAPERGS.</p>
 
-          <h3 class="subhead">Áreas temáticas</h3>
+          <h3 class="subhead" data-i18n="sobre.temas">Áreas temáticas</h3>
           <ul class="chips">
-            <li>Microbiota e microbioma</li>
-            <li>Eixo intestino-cérebro</li>
-            <li>Neurociências</li>
-            <li>Saúde mental</li>
-            <li>Doenças neurológicas e intestinais</li>
-            <li>Imunidade</li>
-            <li>Metabolismo</li>
-            <li>Nutrição</li>
-            <li>Farmacologia</li>
-            <li>Biologia molecular</li>
-            <li>Bioinformática</li>
-            <li>Biotecnologia aplicada à saúde</li>
+            <li data-i18n="sobre.t1">Microbiota e microbioma</li>
+            <li data-i18n="sobre.t2">Eixo intestino-cérebro</li>
+            <li data-i18n="sobre.t3">Neurociências</li>
+            <li data-i18n="sobre.t4">Saúde mental</li>
+            <li data-i18n="sobre.t5">Doenças neurológicas e intestinais</li>
+            <li data-i18n="sobre.t6">Imunidade</li>
+            <li data-i18n="sobre.t7">Metabolismo</li>
+            <li data-i18n="sobre.t8">Nutrição</li>
+            <li data-i18n="sobre.t9">Farmacologia</li>
+            <li data-i18n="sobre.t10">Biologia molecular</li>
+            <li data-i18n="sobre.t11">Bioinformática</li>
+            <li data-i18n="sobre.t12">Biotecnologia aplicada à saúde</li>
           </ul>
         </div>
       </div>
@@ -134,14 +145,14 @@
   <section id="palestrantes" class="section section-alt">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">Convidados</p>
-        <h2 class="section-title">Palestrantes</h2>
+        <p class="eyebrow" data-i18n="palestrantes.eyebrow">Convidados</p>
+        <h2 class="section-title" data-i18n="palestrantes.title">Palestrantes</h2>
       </div>
       <div class="row g-4 justify-content-center reveal" id="speakers-list">
         <div class="col-12">
           <div class="placeholder-card">
             <i class="bi bi-hourglass-split"></i>
-            <span>Palestrantes serão anunciados em breve. Acompanhe no <a href="https://www.instagram.com/neuromicrobioma/" target="_blank" rel="noopener">@neuromicrobioma</a>.</span>
+            <span data-i18n="palestrantes.placeholder">Palestrantes serão anunciados em breve. Acompanhe no <a href="https://www.instagram.com/neuromicrobioma/" target="_blank" rel="noopener">@neuromicrobioma</a>.</span>
           </div>
         </div>
       </div>
@@ -152,15 +163,16 @@
   <section id="programacao" class="section">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">Cronograma</p>
-        <h2 class="section-title">Programação científica</h2>
+        <p class="eyebrow" data-i18n="programacao.eyebrow">Cronograma</p>
+        <h2 class="section-title" data-i18n="programacao.title">Programação científica</h2>
       </div>
       <div class="program reveal" id="program-content">
         <div class="placeholder-card">
           <i class="bi bi-hourglass-split"></i>
-          <span>Programação em elaboração. Acompanhe no <a href="https://www.instagram.com/neuromicrobioma/" target="_blank" rel="noopener">@neuromicrobioma</a>.</span>
+          <span data-i18n="programacao.placeholder">Programação em elaboração. Acompanhe no <a href="https://www.instagram.com/neuromicrobioma/" target="_blank" rel="noopener">@neuromicrobioma</a>.</span>
         </div>
       </div>
+      <p class="program-note reveal"><i class="bi bi-clock"></i> <span data-i18n="programacao.fuso">Horários de Brasília (UTC−3).</span></p>
     </div>
   </section>
 
@@ -168,30 +180,30 @@
   <section id="submissao" class="section section-alt">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">Chamada de trabalhos</p>
-        <h2 class="section-title">Submissão de trabalhos</h2>
-        <p class="section-subtitle">São bem-vindos trabalhos de graduação, iniciação científica, pós-graduação, pesquisa e extensão. <strong>O resumo é enviado no próprio <a href="#inscricao">formulário de inscrição</a>.</strong></p>
+        <p class="eyebrow" data-i18n="submissao.eyebrow">Chamada de trabalhos</p>
+        <h2 class="section-title" data-i18n="submissao.title">Submissão de trabalhos</h2>
+        <p class="section-subtitle" data-i18n="submissao.subtitle">São bem-vindos trabalhos de graduação, iniciação científica, pós-graduação, pesquisa e extensão. <strong>O resumo é enviado no próprio <a href="#inscricao">formulário de inscrição</a>.</strong></p>
       </div>
 
       <div class="row g-4 mb-4">
         <div class="col-md-6 reveal">
           <article class="card-custom">
-            <span class="tag tag-gold"><i class="bi bi-easel"></i> Graduação</span>
-            <h3 class="card-title-custom">Apresentação em pôster</h3>
-            <p class="mb-0">Estudantes de graduação indicam a modalidade pôster (banner) ao submeter o resumo. Após avaliação e aprovação pela Comissão Científica, os participantes recebem as orientações para preparar o pôster.</p>
+            <span class="tag tag-gold"><i class="bi bi-easel"></i> <span data-i18n="submissao.posterTag">Graduação</span></span>
+            <h3 class="card-title-custom" data-i18n="submissao.posterTitle">Apresentação em pôster</h3>
+            <p class="mb-0" data-i18n="submissao.posterText">Estudantes de graduação indicam a modalidade pôster (banner) ao submeter o resumo. Após avaliação e aprovação pela Comissão Científica, os participantes recebem as orientações para preparar o pôster.</p>
           </article>
         </div>
         <div class="col-md-6 reveal">
           <article class="card-custom">
-            <span class="tag tag-navy"><i class="bi bi-lightning-charge"></i> Pós-graduação</span>
+            <span class="tag tag-navy"><i class="bi bi-lightning-charge"></i> <span data-i18n="submissao.pitchTag">Pós-graduação</span></span>
             <h3 class="card-title-custom">Scientific Pitch</h3>
-            <p>Apresentação oral dinâmica e objetiva para estudantes de mestrado e doutorado.</p>
+            <p data-i18n="submissao.pitchText">Apresentação oral dinâmica e objetiva para estudantes de mestrado e doutorado.</p>
             <ul class="feature-list">
-              <li><i class="bi bi-clock"></i>3 minutos de apresentação</li>
-              <li><i class="bi bi-file-earmark-slides"></i>1 slide estático</li>
-              <li><i class="bi bi-people"></i>5 a 6 selecionados por categoria (mestrado e doutorado)</li>
+              <li><i class="bi bi-clock"></i><span data-i18n="submissao.pitch1">3 minutos de apresentação</span></li>
+              <li><i class="bi bi-file-earmark-slides"></i><span data-i18n="submissao.pitch2">1 slide estático</span></li>
+              <li><i class="bi bi-people"></i><span data-i18n="submissao.pitch3">5 a 6 selecionados por categoria (mestrado e doutorado)</span></li>
             </ul>
-            <p class="note">Os trabalhos não selecionados para o Scientific Pitch serão apresentados como pôster.</p>
+            <p class="note" data-i18n="submissao.pitchNote">Os trabalhos não selecionados para o Scientific Pitch serão apresentados como pôster.</p>
           </article>
         </div>
       </div>
@@ -199,29 +211,27 @@
       <div class="row g-4 align-items-stretch">
         <div class="col-lg-7 reveal">
           <div class="card-custom">
-            <h3 class="card-title-custom mt-0">Datas importantes</h3>
+            <h3 class="card-title-custom mt-0" data-i18n="submissao.datas">Datas importantes</h3>
             <ol class="timeline">
-              <li><span>Abertura da submissão</span><strong>[DATA]</strong></li>
-              <li><span>Encerramento da submissão</span><strong>[DATA]</strong></li>
-              <li><span>Divulgação dos trabalhos aprovados</span><strong>[DATA]</strong></li>
-              <li><span>Selecionados para o Scientific Pitch</span><strong>[DATA]</strong></li>
-              <li><span>Apresentação dos pôsteres</span><strong>[DATA]</strong></li>
-              <li><span>Scientific Pitch</span><strong>[DATA]</strong></li>
+              <li><span data-i18n="submissao.d1">Abertura da submissão</span><em data-i18n="submissao.tbd">em breve</em></li>
+              <li><span data-i18n="submissao.d2">Encerramento da submissão</span><em data-i18n="submissao.tbd">em breve</em></li>
+              <li><span data-i18n="submissao.d3">Divulgação dos trabalhos aprovados</span><em data-i18n="submissao.tbd">em breve</em></li>
+              <li><span data-i18n="submissao.d4">Selecionados para o Scientific Pitch</span><em data-i18n="submissao.tbd">em breve</em></li>
+              <li><span data-i18n="submissao.d5">Apresentação dos pôsteres</span><strong data-i18n="submissao.d5Data">17/11</strong></li>
+              <li><span data-i18n="submissao.d6">Scientific Pitch</span><strong data-i18n="submissao.d6Data">18/11</strong></li>
             </ol>
           </div>
         </div>
         <div class="col-lg-5 reveal">
           <div class="card-custom card-dark">
             <i class="bi bi-file-earmark-text card-icon"></i>
-            <h3 class="card-title-custom mt-3">Resumo</h3>
-            <p>Siga o modelo e as normas de submissão. Todos os resumos aprovados devem ser apresentados durante o evento.</p>
+            <h3 class="card-title-custom mt-3" data-i18n="submissao.resumo">Resumo</h3>
+            <p data-i18n="submissao.resumoText">Siga o modelo e as normas de submissão. Todos os resumos aprovados devem ser apresentados durante o evento.</p>
             <div class="d-flex flex-wrap gap-2 mt-4">
               <a href="assets/modelo_resumo_neuromicrobioma_2026.docx" download class="btn btn-light-custom">
-                <i class="bi bi-download me-1"></i> Modelo (.docx)
+                <i class="bi bi-download me-1"></i> <span data-i18n="submissao.modelo">Modelo (.docx)</span>
               </a>
-              <button type="button" class="btn btn-outline-light-custom" data-bs-toggle="modal" data-bs-target="#normasModal">
-                Normas de submissão
-              </button>
+              <button type="button" class="btn btn-outline-light-custom" data-bs-toggle="modal" data-bs-target="#normasModal" data-i18n="submissao.normas">Normas de submissão</button>
             </div>
           </div>
         </div>
@@ -233,45 +243,45 @@
   <section id="inscricao" class="section">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">Inscrições</p>
-        <h2 class="section-title">Inscrição gratuita</h2>
-        <p class="section-subtitle">As vagas são limitadas. O certificado é emitido mediante participação nas atividades do evento e apresentação de trabalhos (pôster ou oral).</p>
+        <p class="eyebrow" data-i18n="inscricao.eyebrow">Inscrições</p>
+        <h2 class="section-title" data-i18n="inscricao.title">Inscrição gratuita</h2>
+        <p class="section-subtitle" data-i18n="inscricao.subtitle">As vagas são limitadas. O certificado é emitido mediante participação nas atividades do evento e apresentação de trabalhos (pôster ou oral).</p>
       </div>
 
       <div class="row g-4 align-items-stretch">
         <div class="col-lg-7 reveal">
           <div class="card-custom">
-            <h3 class="card-title-custom mt-0">Como se inscrever</h3>
+            <h3 class="card-title-custom mt-0" data-i18n="inscricao.como">Como se inscrever</h3>
             <ol class="steps">
-              <li>Preencha o formulário com seus dados e sua categoria.</li>
-              <li>Escolha como deseja participar: <strong>ouvinte</strong> ou <strong>apresentação de trabalho</strong>.</li>
-              <li>Se for apresentar trabalho, anexe o resumo no próprio formulário.</li>
-              <li>Aguarde a confirmação da organização no e-mail informado.</li>
+              <li data-i18n="inscricao.s1">Preencha o formulário com seus dados e sua categoria.</li>
+              <li data-i18n="inscricao.s2">Escolha como deseja participar: <strong>ouvinte</strong> ou <strong>apresentação de trabalho</strong>.</li>
+              <li data-i18n="inscricao.s3">Se for apresentar trabalho, anexe o resumo no próprio formulário.</li>
+              <li data-i18n="inscricao.s4">Aguarde a confirmação da organização no e-mail informado.</li>
             </ol>
             <a href="https://forms.gle/7w1AxQgPguYmGzJs7" target="_blank" rel="noopener" class="btn btn-primary-custom btn-block-custom">
-              Abrir formulário de inscrição <i class="bi bi-box-arrow-up-right ms-1"></i>
+              <span data-i18n="inscricao.botao">Abrir formulário de inscrição</span> <i class="bi bi-box-arrow-up-right ms-1"></i>
             </a>
-            <p class="note mt-3 text-center">O preenchimento do formulário não garante a vaga até a confirmação da organização.</p>
+            <p class="note mt-3 text-center" data-i18n="inscricao.nota">O preenchimento do formulário não garante a vaga até a confirmação da organização.</p>
           </div>
         </div>
 
         <div class="col-lg-5 reveal">
           <div class="card-custom card-solidary">
-            <span class="tag tag-gold"><i class="bi bi-heart"></i> Ação solidária</span>
+            <span class="tag tag-gold"><i class="bi bi-heart"></i> <span data-i18n="inscricao.solidariaTag">Ação solidária</span></span>
             <h3 class="card-title-custom">Projeto Mãos Dadas</h3>
-            <p>O evento convida os participantes a doar ao Projeto Mãos Dadas, da ONG Escritório do Bem, que apoia famílias em situação de vulnerabilidade social no Capão do Leão e em Pelotas.</p>
+            <p data-i18n="inscricao.solidariaText">O evento convida os participantes a doar ao Projeto Mãos Dadas, da ONG Escritório do Bem, que apoia famílias em situação de vulnerabilidade social no Capão do Leão e em Pelotas.</p>
 
             <div class="pix-box">
               <div>
                 <span class="pix-label">PIX (CNPJ)</span>
                 <span class="pix-code" id="pixKey">14.457.158/0001-08</span>
               </div>
-              <button type="button" class="btn-icon" onclick="copyPixKey()" aria-label="Copiar chave PIX">
+              <button type="button" class="btn-icon" onclick="copyPixKey()" aria-label="Copiar chave PIX" data-i18n-attr="aria-label:inscricao.copiar">
                 <i class="bi bi-copy"></i>
               </button>
             </div>
 
-            <p class="note">A doação é voluntária, não é requisito para a inscrição e não é recebida nem administrada pela organização do evento, pela UFPel ou pela FAPERGS.</p>
+            <p class="note" data-i18n="inscricao.doacaoNota">A doação é voluntária, não é requisito para a inscrição e não é recebida nem administrada pela organização do evento, pela UFPel ou pela FAPERGS.</p>
 
             <a href="https://www.instagram.com/maosdadaspelotas/" target="_blank" rel="noopener" class="link-subtle d-inline-block mt-3">
               <i class="bi bi-instagram me-1"></i> @maosdadaspelotas
@@ -286,9 +296,9 @@
   <section id="local" class="section section-alt">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">Local do evento</p>
-        <h2 class="section-title">Auditório de Meteorologia</h2>
-        <p class="section-subtitle">Universidade Federal de Pelotas — Campus Capão do Leão, RS</p>
+        <p class="eyebrow" data-i18n="local.eyebrow">Local do evento</p>
+        <h2 class="section-title" data-i18n="local.title">Auditório de Meteorologia</h2>
+        <p class="section-subtitle" data-i18n="local.subtitle">Universidade Federal de Pelotas — Campus Capão do Leão, RS</p>
       </div>
 
       <div class="row g-4 align-items-stretch">
@@ -302,29 +312,30 @@
                data-lat="-31.8048895" data-lng="-52.4130666"
                data-nome="Auditório de Meteorologia — UFPel"
                data-endereco="Av. Eliseu Maciel, Campus Capão do Leão, Capão do Leão - RS"
-               aria-label="Endereço: Auditório de Meteorologia, UFPel, Campus Capão do Leão. Abrir opções de rota">
+               aria-label="Endereço: Auditório de Meteorologia, UFPel, Campus Capão do Leão. Abrir opções de rota"
+               data-i18n-attr="aria-label:local.enderecoAria">
               <i class="bi bi-geo-alt"></i>
               <div>
-                <h3>Endereço</h3>
-                <p class="address-name">Auditório de Meteorologia</p>
-                <p>UFPel — Campus Capão do Leão<br>Av. Eliseu Maciel · Capão do Leão&nbsp;–&nbsp;RS</p>
+                <h3 data-i18n="local.endereco">Endereço</h3>
+                <p class="address-name" data-i18n="local.auditorio">Auditório de Meteorologia</p>
+                <p data-i18n="local.enderecoLinhas">UFPel — Campus Capão do Leão<br>Av. Eliseu Maciel · Capão do Leão&nbsp;–&nbsp;RS</p>
               </div>
               <i class="bi bi-chevron-right address-chevron"></i>
             </a>
             <div class="info-row">
               <i class="bi bi-bus-front"></i>
               <div>
-                <h3>Como chegar</h3>
+                <h3 data-i18n="local.comoChegar">Como chegar</h3>
                 <ul class="resource-links">
                   <li>
                     <a href="https://wp.ufpel.edu.br/suinfra/transporte-campus-capao-do-leao/" target="_blank" rel="noopener">
-                      <span><strong>Ônibus Santa Silvana</strong><small>Horários da linha Pelotas – Campus Capão do Leão</small></span>
+                      <span><strong data-i18n="local.onibus">Ônibus Santa Silvana</strong><small data-i18n="local.onibusInfo">Horários da linha Pelotas – Campus Capão do Leão</small></span>
                       <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </li>
                   <li>
                     <a href="https://wp.ufpel.edu.br/transporte/transporte-apoio/capao-do-leao/" target="_blank" rel="noopener">
-                      <span><strong>Transporte de Apoio da UFPel</strong><small>Para estudantes, servidores e professores da UFPel</small></span>
+                      <span><strong data-i18n="local.apoio">Transporte de Apoio da UFPel</strong><small data-i18n="local.apoioInfo">Para estudantes, servidores e professores da UFPel</small></span>
                       <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </li>
@@ -334,18 +345,18 @@
             <div class="info-row">
               <i class="bi bi-house-door"></i>
               <div>
-                <h3>Onde ficar</h3>
-                <p>A maior parte das opções de hospedagem fica em Pelotas.</p>
+                <h3 data-i18n="local.ondeFicar">Onde ficar</h3>
+                <p data-i18n="local.hospedagem">A maior parte das opções de hospedagem fica em Pelotas.</p>
                 <ul class="resource-links">
                   <li>
                     <a href="https://www.google.com/travel/search?q=hot%C3%A9is%20em%20Pelotas%2C%20RS" target="_blank" rel="noopener">
-                      <span><strong>Hotéis</strong><small>Sugestões no Google</small></span>
+                      <span><strong data-i18n="local.hoteis">Hotéis</strong><small data-i18n="local.hoteisInfo">Sugestões no Google</small></span>
                       <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </li>
                   <li>
                     <a href="https://www.airbnb.com.br/s/Pelotas--RS/homes?checkin=2026-11-16&amp;checkout=2026-11-18" target="_blank" rel="noopener">
-                      <span><strong>Airbnb</strong><small>Hospedagens em Pelotas (16 a 18/11)</small></span>
+                      <span><strong>Airbnb</strong><small data-i18n="local.airbnbInfo">Hospedagens em Pelotas (16 a 18/11)</small></span>
                       <i class="bi bi-arrow-up-right"></i>
                     </a>
                   </li>
@@ -360,6 +371,7 @@
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13576.840673419996!2d-52.42000000000001!3d-31.780000000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5e5a2b3b895%3A0x868b4d834bc6d3e8!2sUniversidade%20Federal%20de%20Pelotas%20-%20Campus%20Cap%C3%A3o%20do%20Le%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
               title="Mapa do Campus Capão do Leão"
+              data-i18n-attr="title:local.mapa;src:local.mapaSrc"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade">
@@ -370,37 +382,65 @@
     </div>
   </section>
 
-  <!-- ==================== COMISSÃO ORGANIZADORA ==================== -->
-  <section id="comissao" class="section">
+  <!-- ==================== ORGANIZAÇÃO ==================== -->
+  <section id="organizacao" class="section">
     <div class="container">
       <div class="section-head reveal">
-        <p class="eyebrow">Equipe</p>
-        <h2 class="section-title">Comissão organizadora</h2>
+        <p class="eyebrow" data-i18n="org.eyebrow">Equipe</p>
+        <h2 class="section-title" data-i18n="org.title">Organização</h2>
+      </div>
+
+      <h3 class="group-label reveal" data-i18n="org.coordenacao">Coordenação do evento</h3>
+      <div class="row g-4 mb-5">
+        <div class="col-md-6 reveal">
+          <div class="person-card">
+            <span class="person-role">Chair</span>
+            <p class="person-name"><span data-i18n="org.profa">Profa. Dra.</span> Lucielli Savegnago</p>
+            <p class="person-inst">Universidade Federal de Pelotas (UFPel)</p>
+          </div>
+        </div>
+        <div class="col-md-6 reveal">
+          <div class="person-card">
+            <span class="person-role">Co-Chair</span>
+            <p class="person-name"><span data-i18n="org.profa">Profa. Dra.</span> Renata Leivas de Oliveira</p>
+            <p class="person-inst">Universidade Federal de Pelotas (UFPel)</p>
+          </div>
+        </div>
       </div>
 
       <div class="row g-4">
-        <div class="col-sm-6 col-lg-3 reveal">
+        <div class="col-lg-5 reveal">
           <div class="team-card">
-            <h3>Coordenação geral</h3>
-            <p>Nome</p>
+            <h3 data-i18n="org.comissao">Comissão organizadora</h3>
+            <p class="team-inst">UFPel</p>
+            <ul class="name-list">
+              <li>César Augusto Brüning</li>
+              <li>Cristiane Luchese</li>
+              <li>Daniela Hartwig de Oliveira</li>
+              <li>Frederico Schmitt Kremer</li>
+              <li>Simone Pieniz</li>
+            </ul>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-3 reveal">
+        <div class="col-lg-7 reveal">
           <div class="team-card">
-            <h3>Coordenação científica</h3>
-            <p>Nome</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 reveal">
-          <div class="team-card">
-            <h3>Comissão organizadora</h3>
-            <p>Nome<br>Nome<br>Nome</p>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-3 reveal">
-          <div class="team-card">
-            <h3>Comissão científica</h3>
-            <p>Nome<br>Nome<br>Nome</p>
+            <h3 data-i18n="org.comite">Comitê científico</h3>
+            <div class="row g-4">
+              <div class="col-sm-6">
+                <p class="team-inst" data-i18n="org.nacionais">Instituições nacionais</p>
+                <ul class="name-list">
+                  <li>Cristina Wayne Nogueira <small>UFSM</small></li>
+                  <li>Marina Prigol <small>UNIPAMPA</small></li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <p class="team-inst" data-i18n="org.internacionais">Instituições internacionais</p>
+                <ul class="name-list">
+                  <li>Jacob Allen <small>University of Illinois Urbana-Champaign (UIUC), <span data-i18n="org.eua">EUA</span></small></li>
+                  <li>Maria Elisa Caetano-Silva <small>University of Illinois Urbana-Champaign (UIUC), <span data-i18n="org.eua">EUA</span></small></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -412,24 +452,25 @@
     <div class="container">
       <div class="partners reveal">
         <div class="partner-group">
-          <span class="partner-label">Realização</span>
-          <span class="partner-name">Grupo de Pesquisa em Neurobiotecnologia (GPN)</span>
+          <span class="partner-label" data-i18n="apoio.realizacao">Realização</span>
+          <span class="partner-name" data-i18n="apoio.gpn">Grupo de Pesquisa em Neurobiotecnologia (GPN)</span>
           <span class="partner-name">UFPel</span>
         </div>
         <div class="partner-group">
-          <span class="partner-label">Apoio e financiamento</span>
+          <span class="partner-label" data-i18n="apoio.financiamento">Apoio e financiamento</span>
           <span class="partner-name">FAPERGS</span>
           <span class="partner-name">Fulbright</span>
-          <span class="partner-name">Academia Brasileira de Ciências</span>
+          <span class="partner-name" data-i18n="apoio.abc">Academia Brasileira de Ciências</span>
         </div>
         <div class="partner-group">
-          <span class="partner-label">Instituições parceiras</span>
+          <span class="partner-label" data-i18n="apoio.parceiras">Instituições parceiras</span>
+          <span class="partner-name">University of Illinois Urbana-Champaign</span>
           <span class="partner-name">UFSM</span>
           <span class="partner-name">UNIPAMPA</span>
         </div>
         <div class="partner-group">
-          <span class="partner-label">Patrocínio</span>
-          <span class="partner-name text-muted-custom">Em breve</span>
+          <span class="partner-label" data-i18n="apoio.patrocinio">Patrocínio</span>
+          <span class="partner-name text-muted-custom" data-i18n="apoio.emBreve">Em breve</span>
         </div>
       </div>
     </div>
@@ -442,8 +483,8 @@
     <div class="container">
       <div class="row g-4 align-items-center">
         <div class="col-lg-6">
-          <h2 class="footer-title">Fale conosco</h2>
-          <p class="mb-0">Dúvidas e informações sobre o NeuroMicrobioma 2026.</p>
+          <h2 class="footer-title" data-i18n="footer.title">Fale conosco</h2>
+          <p class="mb-0" data-i18n="footer.text">Dúvidas e informações sobre o NeuroMicrobioma 2026.</p>
         </div>
         <div class="col-lg-6">
           <ul class="footer-links list-unstyled">
@@ -461,7 +502,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>&copy; 2026 NeuroMicrobioma · Grupo de Pesquisa em Neurobiotecnologia (GPN) · UFPel</span>
+        <span data-i18n="footer.copy">&copy; 2026 NeuroMicrobioma · Grupo de Pesquisa em Neurobiotecnologia (GPN) · UFPel</span>
       </div>
     </div>
   </footer>
@@ -471,11 +512,11 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title" id="normasModalLabel">Normas de submissão</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          <h2 class="modal-title" id="normasModalLabel" data-i18n="modal.normas">Normas de submissão</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar" data-i18n-attr="aria-label:geral.fechar"></button>
         </div>
         <div class="modal-body">
-          <p class="mb-0"><em>[Em construção — as normas de submissão serão inseridas aqui]</em></p>
+          <p class="mb-0"><em data-i18n="modal.emBreve">[Em construção — as normas de submissão serão inseridas aqui]</em></p>
         </div>
       </div>
     </div>
@@ -485,30 +526,30 @@
   <div class="offcanvas offcanvas-bottom sheet" tabindex="-1" id="rotaSheet" aria-labelledby="rotaSheetLabel">
     <div class="offcanvas-header">
       <div>
-        <h2 class="offcanvas-title" id="rotaSheetLabel">Como chegar</h2>
-        <p class="sheet-sub">Auditório de Meteorologia — UFPel</p>
+        <h2 class="offcanvas-title" id="rotaSheetLabel" data-i18n="local.comoChegar">Como chegar</h2>
+        <p class="sheet-sub" data-i18n="local.sheetSub">Auditório de Meteorologia — UFPel</p>
       </div>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar" data-i18n-attr="aria-label:geral.fechar"></button>
     </div>
     <div class="offcanvas-body">
       <a class="sheet-option" data-app="google" href="#" target="_blank" rel="noopener">
         <i class="bi bi-map"></i>
-        <span><strong>Google Maps</strong><small>Ver rota até o local</small></span>
+        <span><strong>Google Maps</strong><small data-i18n="local.verRota">Ver rota até o local</small></span>
         <i class="bi bi-chevron-right"></i>
       </a>
       <a class="sheet-option" data-app="apple" href="#" target="_blank" rel="noopener" hidden>
         <i class="bi bi-apple"></i>
-        <span><strong>Apple Maps</strong><small>Ver rota até o local</small></span>
+        <span><strong>Apple Maps</strong><small data-i18n="local.verRota">Ver rota até o local</small></span>
         <i class="bi bi-chevron-right"></i>
       </a>
       <a class="sheet-option" data-app="waze" href="#" target="_blank" rel="noopener">
         <i class="bi bi-sign-turn-right"></i>
-        <span><strong>Waze</strong><small>Navegar até o local</small></span>
+        <span><strong>Waze</strong><small data-i18n="local.navegar">Navegar até o local</small></span>
         <i class="bi bi-chevron-right"></i>
       </a>
       <a class="sheet-option" data-app="uber" href="#" target="_blank" rel="noopener">
         <i class="bi bi-car-front"></i>
-        <span><strong>Uber</strong><small>Pedir corrida até o local</small></span>
+        <span><strong>Uber</strong><small data-i18n="local.corrida">Pedir corrida até o local</small></span>
         <i class="bi bi-chevron-right"></i>
       </a>
     </div>
@@ -518,14 +559,15 @@
   <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3">
     <div id="pixToast" class="toast align-items-center text-bg-dark border-0 rounded-pill" role="status" aria-live="polite" aria-atomic="true">
       <div class="toast-body px-4">
-        <i class="bi bi-check-circle-fill me-2"></i> Chave PIX copiada!
+        <i class="bi bi-check-circle-fill me-2"></i> <span data-i18n="inscricao.copiado">Chave PIX copiada!</span>
       </div>
     </div>
   </div>
 
   <!-- Bootstrap 5 JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
+  <!-- Custom JS (i18n first: the others read window.i18n) -->
+  <script src="js/i18n.js"></script>
   <script src="js/script.js"></script>
   <script src="js/conteudo.js"></script>
 </body>

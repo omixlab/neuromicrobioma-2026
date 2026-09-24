@@ -1,36 +1,151 @@
 {
-  "publicado": false,
+  "publicado": true,
   "dias": [
     {
       "data": "2026-11-17",
+      "tema": {
+        "pt": "Microbioma, neurociência e cooperação científica",
+        "en": "Microbiome, neuroscience and scientific cooperation"
+      },
       "atividades": [
-        { "inicio": "08:00", "fim": "09:00", "tipo": "credenciamento", "titulo": "Credenciamento" },
-        { "inicio": "09:00", "fim": "09:30", "tipo": "abertura", "titulo": "Cerimônia de abertura" },
         {
-          "inicio": "09:30",
-          "fim": "10:30",
-          "tipo": "palestra",
-          "titulo": "Título da palestra",
-          "palestrantes": ["exemplo-1"],
-          "descricao": "Resumo opcional da atividade."
+          "inicio": "12:30", "fim": "13:50", "tipo": "credenciamento",
+          "titulo": { "pt": "Credenciamento", "en": "Check-in" }
         },
-        { "inicio": "10:30", "fim": "11:00", "tipo": "intervalo", "titulo": "Coffee break" },
         {
-          "inicio": "11:00",
-          "fim": "12:00",
-          "tipo": "mesa-redonda",
-          "titulo": "Título da mesa-redonda",
-          "palestrantes": ["exemplo-1", "exemplo-2"]
+          "inicio": "14:00", "fim": "14:10", "tipo": "abertura",
+          "titulo": { "pt": "Solenidade de abertura", "en": "Opening ceremony" },
+          "descricao": {
+            "pt": "Abertura institucional e apresentação da cooperação científica internacional UFPel–University of Illinois, fortalecida pelo Prêmio Fulbright–ABC 2025 e pelo apoio da FAPERGS.",
+            "en": "Institutional opening and presentation of the international scientific cooperation between UFPel and the University of Illinois, strengthened by the 2025 Fulbright–ABC Award and supported by FAPERGS."
+          }
         },
-        { "inicio": "14:00", "fim": "16:00", "tipo": "poster", "titulo": "Sessão de pôsteres", "local": "Hall do auditório" }
+        {
+          "inicio": "14:10", "fim": "14:50", "tipo": "palestra",
+          "titulo": "The Stressed Gut: Decoding How Brain-Gut Signaling Drives Intestinal Disease",
+          "palestrantes": ["jacob-allen"]
+        },
+        { "inicio": "14:50", "fim": "15:00", "tipo": "discussao" },
+        {
+          "inicio": "15:00", "fim": "15:30", "tipo": "palestra",
+          "titulo": {
+            "pt": "Eixo intestino-cérebro e transtornos de humor: evidências sobre o papel da microbiota intestinal",
+            "en": "Gut-brain axis and mood disorders: evidence regarding the role of gut microbiota"
+          },
+          "palestrantes": ["fernanda-pedrotti-moreira"]
+        },
+        { "inicio": "15:30", "fim": "15:35", "tipo": "discussao" },
+        {
+          "inicio": "15:35", "fim": "16:05", "tipo": "palestra",
+          "titulo": {
+            "pt": "Modulando a disfunção microglial no eixo intestino-cérebro: fibra alimentar e AGCC no envelhecimento e na doença inflamatória intestinal (DII)",
+            "en": "Modulating microglial dysfunction across the gut-brain axis: dietary fiber and SCFAs in aging and inflammatory bowel disease (IBD)"
+          },
+          "palestrantes": ["maria-elisa-caetano-silva"]
+        },
+        { "inicio": "16:05", "fim": "16:10", "tipo": "discussao" },
+        {
+          "inicio": "16:10", "fim": "17:30", "tipo": "poster",
+          "titulo": {
+            "pt": "Coffee break, sessão de pôsteres e integração científica",
+            "en": "Coffee break, poster session and scientific networking"
+          },
+          "descricao": {
+            "pt": "Apresentação de trabalhos, networking científico e interação entre estudantes, pesquisadores e palestrantes, visando estimular novas colaborações científicas e acadêmicas.",
+            "en": "Poster presentations, scientific networking and interaction among students, researchers and speakers, aimed at fostering new scientific and academic collaborations."
+          }
+        }
       ]
     },
     {
       "data": "2026-11-18",
+      "tema": {
+        "pt": "Jovens talentos, inovação e comunicação científica",
+        "en": "Young talents, innovation and science communication"
+      },
       "atividades": [
-        { "inicio": "09:00", "fim": "10:00", "tipo": "palestra", "titulo": "Título da palestra", "palestrantes": ["exemplo-2"] },
-        { "inicio": "10:30", "fim": "12:00", "tipo": "pitch", "titulo": "Scientific Pitch — Mestrado e Doutorado" },
-        { "inicio": "17:00", "fim": "17:30", "tipo": "encerramento", "titulo": "Encerramento" }
+        {
+          "inicio": "09:00", "fim": "10:00", "tipo": "pitch",
+          "titulo": { "pt": "Scientific Pitch — Mestrado", "en": "Scientific Pitch — Master's" },
+          "descricao": {
+            "pt": "Apresentações de 3 minutos, com um slide estático. Participação de 5 a 6 estudantes selecionados.",
+            "en": "3-minute presentations with a single static slide, by 5 to 6 selected students."
+          }
+        },
+        {
+          "inicio": "10:00", "fim": "10:20", "tipo": "intervalo",
+          "titulo": "Coffee break"
+        },
+        {
+          "inicio": "10:20", "fim": "10:50", "tipo": "palestra",
+          "titulo": {
+            "pt": "Probióticos e o cérebro: o que as evidências pré-clínicas nos dizem?",
+            "en": "Probiotics and the Brain: What Does Preclinical Evidence Tell Us?"
+          },
+          "palestrantes": ["paloma-taborda-birmann"]
+        },
+        { "inicio": "10:50", "fim": "10:55", "tipo": "discussao" },
+        {
+          "inicio": "10:55", "fim": "11:55", "tipo": "pitch",
+          "titulo": { "pt": "Scientific Pitch — Doutorado", "en": "Scientific Pitch — PhD" },
+          "descricao": {
+            "pt": "Apresentações de 3 minutos, com um slide estático. Participação de 5 a 6 estudantes selecionados.",
+            "en": "3-minute presentations with a single static slide, by 5 to 6 selected students."
+          }
+        },
+        {
+          "inicio": "13:30", "fim": "14:00", "tipo": "palestra",
+          "titulo": {
+            "pt": "Determinantes sociais e biológicos da saúde mental ao longo do curso da vida",
+            "en": "Social and Biological Determinants of Mental Health Across the Life Course"
+          },
+          "palestrantes": ["luciana-tovo-rodrigues"]
+        },
+        { "inicio": "14:00", "fim": "14:05", "tipo": "discussao" },
+        {
+          "inicio": "14:05", "fim": "14:35", "tipo": "palestra",
+          "titulo": {
+            "pt": "Sono e o eixo intestino–cérebro: evidências da Coorte de Nascimentos de Pelotas de 2004",
+            "en": "Sleep and the Gut–Brain Axis: Evidence from the 2004 Pelotas Birth Cohort"
+          },
+          "palestrantes": ["marina-carpena"]
+        },
+        { "inicio": "14:35", "fim": "14:40", "tipo": "discussao" },
+        {
+          "inicio": "14:40", "fim": "15:10", "tipo": "palestra",
+          "titulo": {
+            "pt": "Intestino, cérebro e exercício físico: como o movimento influencia sua saúde de dentro para fora",
+            "en": "Gut, Brain, and Physical Exercise: How Movement Influences Your Health from the Inside Out"
+          },
+          "palestrantes": ["roberta-malaguez"]
+        },
+        { "inicio": "15:10", "fim": "15:15", "tipo": "discussao" },
+        {
+          "inicio": "15:15", "fim": "15:45", "tipo": "palestra",
+          "titulo": {
+            "pt": "Entre o intestino e o cérebro: o microbioma na resposta ao estresse",
+            "en": "Between the Gut and the Brain: The Microbiome in the Stress Response"
+          },
+          "palestrantes": ["luiza-souza-marques"]
+        },
+        { "inicio": "15:45", "fim": "15:50", "tipo": "discussao" },
+        {
+          "inicio": "15:50", "fim": "16:20", "tipo": "palestra",
+          "titulo": {
+            "pt": "Pós-bióticos como estratégia de neuroproteção: evidências experimentais em modelos de Alzheimer e Parkinson",
+            "en": "Postbiotics as a neuroprotective strategy: experimental evidence from Alzheimer's and Parkinson's disease models"
+          },
+          "palestrantes": ["simone-pinton"]
+        },
+        { "inicio": "16:20", "fim": "16:25", "tipo": "discussao" },
+        {
+          "inicio": "16:25", "fim": "16:45", "tipo": "encerramento",
+          "titulo": { "pt": "Cerimônia de premiação e encerramento", "en": "Awards and closing ceremony" }
+        },
+        {
+          "inicio": "16:45", "fim": "17:30", "tipo": "intervalo",
+          "titulo": { "pt": "Coffee de integração científica", "en": "Scientific networking coffee" }
+        }
       ]
     }
   ]
