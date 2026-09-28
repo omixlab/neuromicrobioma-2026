@@ -74,5 +74,7 @@ Os demais textos estão no `index.html` (português) e em `js/i18n.js` (inglês)
 
 ## Dicas
 
+- O botão "Adicionar à agenda" não lê a programação. Se o início ou o fim de algum dia mudar, atualize também `AGENDA` em `js/script.js` (Google Agenda) e `assets/neuromicrobioma-2026.ics` (Apple Calendar / Outlook).
+
 - Valide o JSON antes do commit (ex.: https://jsonlint.com). Uma vírgula sobrando faz a seção voltar para "em breve".
 - Para ver localmente, abra um servidor na pasta do projeto: `python3 -m http.server` e acesse http://localhost:8000. Abrir o `index.html` direto (file://) não carrega os JSON.

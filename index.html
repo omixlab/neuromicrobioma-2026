@@ -78,7 +78,12 @@
           <p class="hero-tagline" data-i18n="hero.tagline">Ciência que conecta. Saúde que transforma.</p>
 
           <ul class="hero-meta list-unstyled">
-            <li><i class="bi bi-calendar3"></i> <span data-i18n="hero.date">17 e 18 de novembro de 2026</span></li>
+            <li class="hero-date">
+              <span><i class="bi bi-calendar3"></i> <span data-i18n="hero.date">17 e 18 de novembro de 2026</span></span>
+              <button type="button" class="btn-cal" data-bs-toggle="offcanvas" data-bs-target="#agendaSheet">
+                <span aria-hidden="true">📅</span> <span data-i18n="cal.botao">Adicionar à agenda</span>
+              </button>
+            </li>
             <li><i class="bi bi-geo-alt"></i> <span data-i18n="hero.place">UFPel · Campus Capão do Leão, RS</span></li>
             <li><i class="bi bi-ticket-perforated"></i> <span data-i18n="hero.free">Inscrição gratuita · vagas limitadas</span></li>
           </ul>
@@ -207,10 +212,11 @@
           <div class="card-custom">
             <h3 class="card-title-custom mt-0" data-i18n="submissao.datas">Datas importantes</h3>
             <ol class="timeline">
-              <li><span data-i18n="submissao.d1">Abertura da submissão</span><em data-i18n="submissao.tbd">em breve</em></li>
-              <li><span data-i18n="submissao.d2">Encerramento da submissão</span><em data-i18n="submissao.tbd">em breve</em></li>
-              <li><span data-i18n="submissao.d3">Divulgação dos trabalhos aprovados</span><em data-i18n="submissao.tbd">em breve</em></li>
-              <li><span data-i18n="submissao.d4">Selecionados para o Scientific Pitch</span><em data-i18n="submissao.tbd">em breve</em></li>
+              <li><span data-i18n="submissao.d0">Abertura das inscrições</span><strong data-i18n="submissao.d0Data">01/10</strong></li>
+              <li><span data-i18n="submissao.d1">Abertura da submissão de resumos</span><strong data-i18n="submissao.d1Data">06/10</strong></li>
+              <li><span data-i18n="submissao.d2">Encerramento da submissão</span><strong data-i18n="submissao.d2Data">20/10, 23h59</strong></li>
+              <li><span data-i18n="submissao.d3">Divulgação dos trabalhos aprovados</span><strong data-i18n="submissao.d3Data">26/10</strong></li>
+              <li><span data-i18n="submissao.d4">Selecionados para o Scientific Pitch</span><strong data-i18n="submissao.d4Data">03/11</strong></li>
               <li><span data-i18n="submissao.d5">Apresentação dos pôsteres</span><strong data-i18n="submissao.d5Data">17/11</strong></li>
               <li><span data-i18n="submissao.d6">Scientific Pitch</span><strong data-i18n="submissao.d6Data">18/11</strong></li>
             </ol>
@@ -239,7 +245,7 @@
       <div class="section-head reveal">
         <p class="eyebrow" data-i18n="inscricao.eyebrow">Inscrições</p>
         <h2 class="section-title" data-i18n="inscricao.title">Inscrição gratuita</h2>
-        <p class="section-subtitle" data-i18n="inscricao.subtitle">As vagas são limitadas. O certificado é emitido mediante participação nas atividades do evento e apresentação de trabalhos (pôster ou oral).</p>
+        <p class="section-subtitle" data-i18n="inscricao.subtitle"><strong>Inscrições a partir de 1º de outubro.</strong> As vagas são limitadas. O certificado é emitido mediante participação nas atividades do evento e apresentação de trabalhos (pôster ou oral).</p>
       </div>
 
       <div class="row g-4 align-items-stretch">
@@ -252,7 +258,7 @@
               <li data-i18n="inscricao.s3">Se for apresentar trabalho, anexe o resumo no próprio formulário.</li>
               <li data-i18n="inscricao.s4">Aguarde a confirmação da organização no e-mail informado.</li>
             </ol>
-            <a href="https://forms.gle/7w1AxQgPguYmGzJs7" target="_blank" rel="noopener" class="btn btn-primary-custom btn-block-custom">
+            <a href="https://forms.gle/zXvV6Z98szhgkkAS8" target="_blank" rel="noopener" class="btn btn-primary-custom btn-block-custom">
               <span data-i18n="inscricao.botao">Abrir formulário de inscrição</span> <i class="bi bi-box-arrow-up-right ms-1"></i>
             </a>
             <p class="note mt-3 text-center" data-i18n="inscricao.nota">O preenchimento do formulário não garante a vaga até a confirmação da organização.</p>
@@ -544,6 +550,36 @@
       <a class="sheet-option" data-app="uber" href="#" target="_blank" rel="noopener">
         <i class="bi bi-car-front"></i>
         <span><strong>Uber</strong><small data-i18n="local.corrida">Pedir corrida até o local</small></span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== ADICIONAR À AGENDA ==================== -->
+  <!-- Google links are built in js/script.js (AGENDA); Apple/Outlook use assets/neuromicrobioma-2026.ics.
+       If the event times change, update both. -->
+  <div class="offcanvas offcanvas-bottom sheet" tabindex="-1" id="agendaSheet" aria-labelledby="agendaSheetLabel">
+    <div class="offcanvas-header">
+      <div>
+        <h2 class="offcanvas-title" id="agendaSheetLabel" data-i18n="cal.titulo">Adicionar à agenda</h2>
+        <p class="sheet-sub" data-i18n="cal.sub">NeuroMicrobioma 2026 · horário de Brasília (UTC−3)</p>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar" data-i18n-attr="aria-label:geral.fechar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <a class="sheet-option" data-agenda="google" data-dia="0" href="#" target="_blank" rel="noopener">
+        <i class="bi bi-google"></i>
+        <span><strong data-i18n="cal.google">Google Agenda</strong><small data-i18n="cal.dia1">Dia 1 · 17/11, 12:30–17:30</small></span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a class="sheet-option" data-agenda="google" data-dia="1" href="#" target="_blank" rel="noopener">
+        <i class="bi bi-google"></i>
+        <span><strong data-i18n="cal.google">Google Agenda</strong><small data-i18n="cal.dia2">Dia 2 · 18/11, 9:00–17:30</small></span>
+        <i class="bi bi-chevron-right"></i>
+      </a>
+      <a class="sheet-option" data-agenda="ics" href="assets/neuromicrobioma-2026.ics">
+        <i class="bi bi-apple"></i>
+        <span><strong>Apple Calendar / Outlook</strong><small data-i18n="cal.ics">Os dois dias · arquivo .ics</small></span>
         <i class="bi bi-chevron-right"></i>
       </a>
     </div>

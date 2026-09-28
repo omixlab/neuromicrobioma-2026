@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', onScroll, { passive: true });
 
   setupDirections();
+  setupCalendar();
 
   if (!('IntersectionObserver' in window)) {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
@@ -81,6 +82,45 @@ function setupDirections() {
     e.preventDefault();
     sheet.show();
   });
+  sheetEl.querySelectorAll('.sheet-option').forEach(option => {
+    option.addEventListener('click', () => sheet.hide());
+  });
+}
+
+// Event days for "Adicionar à agenda" (Brasília time, UTC−3).
+// If these change, also update assets/neuromicrobioma-2026.ics and data/programacao.json.
+const AGENDA = [
+  { inicio: '2026-11-17T12:30:00-03:00', fim: '2026-11-17T17:30:00-03:00' },
+  { inicio: '2026-11-18T09:00:00-03:00', fim: '2026-11-18T17:30:00-03:00' }
+];
+
+// Google Calendar takes one event per link, so each day gets its own option.
+// The links are rebuilt whenever the sheet opens, in the current language.
+function setupCalendar() {
+  const sheetEl = document.getElementById('agendaSheet');
+  const address = document.getElementById('enderecoLink');
+  if (!sheetEl) return;
+
+  const utc = iso => new Date(iso).toISOString().replace(/[-:]|\.\d{3}/g, ''); // 20261117T153000Z
+  const site = location.origin + location.pathname;
+  const place = address ? `${address.dataset.nome}, ${address.dataset.endereco}` : '';
+
+  sheetEl.addEventListener('show.bs.offcanvas', () => {
+    const { t } = window.i18n;
+    sheetEl.querySelectorAll('[data-agenda="google"]').forEach(option => {
+      const n = Number(option.dataset.dia);
+      const params = new URLSearchParams({
+        action: 'TEMPLATE',
+        text: `${t('cal.evento', 'NeuroMicrobioma 2026 — Dia')} ${n + 1}`,
+        dates: `${utc(AGENDA[n].inicio)}/${utc(AGENDA[n].fim)}`,
+        details: `${t('cal.detalhes', '1º Simpósio sobre Microbioma, Eixo Intestino-Cérebro e Saúde Mental.\nProgramação:')} ${site}#programacao`,
+        location: place
+      });
+      option.href = `https://calendar.google.com/calendar/render?${params}`;
+    });
+  });
+
+  const sheet = bootstrap.Offcanvas.getOrCreateInstance(sheetEl);
   sheetEl.querySelectorAll('.sheet-option').forEach(option => {
     option.addEventListener('click', () => sheet.hide());
   });

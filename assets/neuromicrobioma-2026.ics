@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NeuroMicrobioma//Site 2026//PT
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:NeuroMicrobioma 2026
+BEGIN:VEVENT
+UID:neuromicrobioma-2026-dia-1@omixlab.github.io
+DTSTAMP:20260924T000000Z
+DTSTART:20261117T153000Z
+DTEND:20261117T203000Z
+SUMMARY:NeuroMicrobioma 2026 — Dia 1
+LOCATION:Auditório de Meteorologia — UFPel\, Av. Eliseu Maciel\, Campus 
+ Capão do Leão\, Capão do Leão - RS\, Brasil
+GEO:-31.8048895;-52.4130666
+DESCRIPTION:1º Simpósio sobre Microbioma\, Eixo Intestino-Cérebro e Saú
+ de Mental.\nProgramação: https://omixlab.github.io/neuromicrobioma-2026/
+ #programacao
+URL:https://omixlab.github.io/neuromicrobioma-2026/
+END:VEVENT
+BEGIN:VEVENT
+UID:neuromicrobioma-2026-dia-2@omixlab.github.io
+DTSTAMP:20260924T000000Z
+DTSTART:20261118T120000Z
+DTEND:20261118T203000Z
+SUMMARY:NeuroMicrobioma 2026 — Dia 2
+LOCATION:Auditório de Meteorologia — UFPel\, Av. Eliseu Maciel\, Campus 
+ Capão do Leão\, Capão do Leão - RS\, Brasil
+GEO:-31.8048895;-52.4130666
+DESCRIPTION:1º Simpósio sobre Microbioma\, Eixo Intestino-Cérebro e Saú
+ de Mental.\nProgramação: https://omixlab.github.io/neuromicrobioma-2026/
+ #programacao
+URL:https://omixlab.github.io/neuromicrobioma-2026/
+END:VEVENT
+END:VCALENDAR

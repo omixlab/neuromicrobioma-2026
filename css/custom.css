@@ -303,6 +303,34 @@ a:hover { color: var(--gold); }
 
 .hero-meta i { color: var(--gold); margin-right: 0.4rem; }
 
+.hero-date {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.75rem;
+}
+
+.btn-cal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid rgba(12, 31, 58, 0.15);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--navy);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: border-color 0.2s ease, transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.btn-cal:hover {
+  border-color: var(--gold);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(12, 31, 58, 0.08);
+}
+
 .hero-logo {
   max-width: 440px;
   margin: 0 auto;
@@ -499,8 +527,6 @@ section .lead-text { color: var(--navy); }
 
 .timeline span { color: var(--text-muted); }
 .timeline strong { color: var(--navy); font-weight: 600; white-space: nowrap; }
-.timeline em { color: var(--text-muted); font-weight: 400; white-space: nowrap; }
-
 .steps {
   list-style: none;
   counter-reset: step;
