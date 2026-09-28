@@ -7,7 +7,7 @@
       "nome": "Jacob Allen",
       "instituicao": "University of Illinois Urbana-Champaign (UIUC)",
       "pais": { "pt": "EUA", "en": "USA" },
-      "foto": "assets/palestrantes/jacob-allen.jpg",
+      "foto": "assets/palestrantes/jacob-allen.jpeg",
       "bio": "",
       "link": ""
     },
@@ -16,7 +16,7 @@
       "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
       "nome": "Fernanda Pedrotti Moreira",
       "instituicao": "Universidade Católica de Pelotas (UCPel)",
-      "foto": "assets/palestrantes/fernanda-pedrotti-moreira.jpg",
+      "foto": "assets/palestrantes/fernanda-pedrotti-moreira.jpeg",
       "bio": "",
       "link": ""
     },
@@ -26,7 +26,7 @@
       "nome": "Maria Elisa Caetano-Silva",
       "instituicao": "University of Illinois Urbana-Champaign (UIUC)",
       "pais": { "pt": "EUA", "en": "USA" },
-      "foto": "assets/palestrantes/maria-elisa-caetano-silva.jpg",
+      "foto": "assets/palestrantes/maria-elisa-caetano-silva.jpeg",
       "bio": "",
       "link": ""
     },
@@ -35,7 +35,7 @@
       "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
       "nome": "Paloma Taborda Birmann",
       "instituicao": "Universidade Federal do Rio Grande (FURG)",
-      "foto": "assets/palestrantes/paloma-taborda-birmann.jpg",
+      "foto": "assets/palestrantes/paloma-taborda-birmann.jpeg",
       "bio": "",
       "link": ""
     },
@@ -44,7 +44,7 @@
       "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
       "nome": "Luciana Tovo Rodrigues",
       "instituicao": "Universidade Federal de Pelotas (UFPel)",
-      "foto": "assets/palestrantes/luciana-tovo-rodrigues.jpg",
+      "foto": "assets/palestrantes/luciana-tovo-rodrigues.jpeg",
       "bio": "",
       "link": ""
     },
@@ -53,7 +53,7 @@
       "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
       "nome": "Marina Carpena",
       "instituicao": "Universidade Federal de Pelotas (UFPel)",
-      "foto": "assets/palestrantes/marina-carpena.jpg",
+      "foto": "assets/palestrantes/marina-carpena.jpeg",
       "bio": "",
       "link": ""
     },
@@ -62,7 +62,7 @@
       "tratamento": { "pt": "Dra.", "en": "Dr." },
       "nome": "Roberta Malaguêz",
       "instituicao": "",
-      "foto": "assets/palestrantes/roberta-malaguez.jpg",
+      "foto": "assets/palestrantes/roberta-malaguez.jpeg",
       "bio": "",
       "link": ""
     },
@@ -71,7 +71,7 @@
       "tratamento": { "pt": "Dra.", "en": "Dr." },
       "nome": "Luiza de Souza Marques",
       "instituicao": "Universidade Federal de Santa Maria (UFSM)",
-      "foto": "assets/palestrantes/luiza-souza-marques.jpg",
+      "foto": "assets/palestrantes/luiza-souza-marques.jpeg",
       "bio": "",
       "link": ""
     },
@@ -80,7 +80,7 @@
       "tratamento": { "pt": "Profa. Dra.", "en": "Prof." },
       "nome": "Simone Pinton",
       "instituicao": "Universidade Federal do Pampa (UNIPAMPA)",
-      "foto": "assets/palestrantes/simone-pinton.jpg",
+      "foto": "assets/palestrantes/simone-pinton.jpeg",
       "bio": "",
       "link": ""
     }
