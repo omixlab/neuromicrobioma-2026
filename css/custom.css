@@ -439,6 +439,51 @@ section .lead-text { color: var(--navy); }
 .card-dark p { color: rgba(255, 255, 255, 0.72); }
 .card-icon { font-size: 1.75rem; color: var(--gold); }
 
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.check-list li {
+  position: relative;
+  padding: 0.3rem 0 0.3rem 1.6rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.check-list li::before {
+  content: '\F272'; /* bootstrap-icons: check2 */
+  font-family: 'bootstrap-icons';
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  color: var(--gold);
+}
+
+.dark-links {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.dark-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 0;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: color 0.2s ease;
+}
+
+.dark-links li:last-child a { border-bottom: 0; padding-bottom: 0; }
+.dark-links i { color: var(--gold); font-size: 1rem; }
+.dark-links a:hover { color: #fff; }
+
 .card-solidary {
   background: linear-gradient(160deg, #fff 0%, var(--gold-soft) 140%);
 }
@@ -1089,17 +1134,7 @@ footer {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Modal & toast */
-.modal-content {
-  border: 0;
-  border-radius: var(--radius);
-  background: var(--cream);
-}
-
-.modal-header { border-bottom-color: var(--border); padding: 1.25rem 1.75rem; }
-.modal-title { font-size: 1.6rem; margin: 0; }
-.modal-body { padding: 1.75rem; color: var(--text-muted); }
-
+/* Toast */
 .toast-container { z-index: 1090; }
 .toast .bi { color: var(--sage); }
 
