@@ -246,6 +246,31 @@ a:hover { color: var(--gold); }
 
 .btn-outline-light-custom:hover { color: #fff; border-color: #fff; transform: translateY(-2px); }
 
+/* Form buttons not open yet: "disabled" shows the "Em breve" label and hides the external-link icon */
+.btn .soon { display: none; }
+
+.btn.disabled .soon {
+  display: inline;
+  margin-left: 0.5rem;
+  font-weight: 400;
+}
+
+.btn.disabled .bi-box-arrow-up-right { display: none; }
+
+.btn-primary-custom.disabled {
+  opacity: 1;
+  background: var(--cream-alt);
+  border: 1px dashed rgba(12, 31, 58, 0.25);
+  color: var(--text-muted);
+}
+
+.btn-light-custom.disabled {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .btn-icon {
   flex-shrink: 0;
   width: 40px;

@@ -171,7 +171,8 @@
     'footer.text': 'Questions and information about NeuroMicrobioma 2026.',
     'footer.copy': '&copy; 2026 NeuroMicrobioma · Neurobiotechnology Research Group (GPN) · UFPel',
 
-    'geral.fechar': 'Close'
+    'geral.fechar': 'Close',
+    'geral.emBreve': 'Coming soon'
   };
 
   const LANGS = ['pt', 'en'];
