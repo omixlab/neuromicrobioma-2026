@@ -240,9 +240,19 @@
               <li data-i18n="submissao.n3">Apresentador inscrito no evento, com no máximo 2 trabalhos</li>
             </ul>
             <p class="small" data-i18n="submissao.anais">Os resumos aprovados serão publicados nos anais do evento (e-book no Zenodo).</p>
-            <!-- Desativado por enquanto. Para liberar: troque data-href por href e remova "disabled" e aria-disabled. -->
-            <a data-href="https://forms.gle/GdvopGb6J3j7WzoKA" target="_blank" rel="noopener" class="btn btn-light-custom w-100 mt-2 disabled" aria-disabled="true">
-              <!--<span data-i18n="submissao.enviar">Enviar resumo</span> <i class="bi bi-box-arrow-up-right ms-1"></i>-->
+            <div class="countdown countdown-dark" id="contagem-submissao" role="timer" hidden>
+              <p class="countdown-label" data-i18n="contagem.submissao">A submissão de resumos abre em</p>
+              <div class="countdown-units">
+                <span class="countdown-unit"><strong data-unit="d">00</strong><small data-i18n="contagem.dias">dias</small></span>
+                <span class="countdown-unit"><strong data-unit="h">00</strong><small data-i18n="contagem.horas">horas</small></span>
+                <span class="countdown-unit"><strong data-unit="m">00</strong><small data-i18n="contagem.min">min</small></span>
+                <span class="countdown-unit"><strong data-unit="s">00</strong><small data-i18n="contagem.seg">seg</small></span>
+              </div>
+            </div>
+            <!-- Liberado automaticamente por js/script.js na data de data-abre (horário de Brasília). -->
+            <a data-href="https://forms.gle/GdvopGb6J3j7WzoKA" data-abre="2026-10-06T00:00:00-03:00" data-contagem="contagem-submissao"
+               target="_blank" rel="noopener" class="btn btn-light-custom w-100 mt-2 disabled" aria-disabled="true">
+              <span class="btn-label" data-i18n="submissao.enviar">Enviar resumo</span> <i class="bi bi-box-arrow-up-right ms-1"></i>
               <em class="soon" data-i18n="geral.emBreve">Em breve</em>
             </a>
             <ul class="dark-links">
@@ -287,9 +297,19 @@
               <li data-i18n="inscricao.s3">Se for apresentar trabalho, envie também o resumo pelo <a href="#submissao">formulário de submissão</a>.</li>
               <li data-i18n="inscricao.s4">Aguarde a confirmação da organização no e-mail informado.</li>
             </ol>
-            <!-- Desativado por enquanto. Para liberar: troque data-href por href e remova "disabled" e aria-disabled. -->
-            <a data-href="https://forms.gle/zXvV6Z98szhgkkAS8" target="_blank" rel="noopener" class="btn btn-primary-custom btn-block-custom disabled" aria-disabled="true">
-              <!--<span data-i18n="inscricao.botao">Abrir formulário de inscrição</span> <i class="bi bi-box-arrow-up-right ms-1"></i>-->
+            <div class="countdown" id="contagem-inscricao" role="timer" hidden>
+              <p class="countdown-label" data-i18n="contagem.inscricao">As inscrições abrem em</p>
+              <div class="countdown-units">
+                <span class="countdown-unit"><strong data-unit="d">00</strong><small data-i18n="contagem.dias">dias</small></span>
+                <span class="countdown-unit"><strong data-unit="h">00</strong><small data-i18n="contagem.horas">horas</small></span>
+                <span class="countdown-unit"><strong data-unit="m">00</strong><small data-i18n="contagem.min">min</small></span>
+                <span class="countdown-unit"><strong data-unit="s">00</strong><small data-i18n="contagem.seg">seg</small></span>
+              </div>
+            </div>
+            <!-- Liberado automaticamente por js/script.js na data de data-abre (horário de Brasília). -->
+            <a data-href="https://forms.gle/zXvV6Z98szhgkkAS8" data-abre="2026-10-01T00:00:00-03:00" data-contagem="contagem-inscricao"
+               target="_blank" rel="noopener" class="btn btn-primary-custom btn-block-custom disabled" aria-disabled="true">
+              <span class="btn-label" data-i18n="inscricao.botao">Abrir formulário de inscrição</span> <i class="bi bi-box-arrow-up-right ms-1"></i>
               <em class="soon" data-i18n="geral.emBreve">Em breve</em>
             </a>
             <p class="note mt-3 text-center" data-i18n="inscricao.nota">O preenchimento do formulário não garante a vaga até a confirmação da organização.</p>
@@ -449,6 +469,7 @@
               <li>Cristiane Luchese</li>
               <li>Daniela Hartwig de Oliveira</li>
               <li>Frederico Schmitt Kremer</li>
+              <li>Isadora Cosenza Vieira da Silva</li>
               <li>Simone Pieniz</li>
             </ul>
           </div>

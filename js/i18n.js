@@ -172,7 +172,14 @@
     'footer.copy': '&copy; 2026 NeuroMicrobioma · Neurobiotechnology Research Group (GPN) · UFPel',
 
     'geral.fechar': 'Close',
-    'geral.emBreve': 'Coming soon'
+    'geral.emBreve': 'Coming soon',
+
+    'contagem.inscricao': 'Registration opens in',
+    'contagem.submissao': 'Abstract submission opens in',
+    'contagem.dias': 'days',
+    'contagem.horas': 'hours',
+    'contagem.min': 'min',
+    'contagem.seg': 'sec'
   };
 
   const LANGS = ['pt', 'en'];

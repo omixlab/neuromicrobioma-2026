@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   setupDirections();
   setupCalendar();
+  setupCountdowns();
 
   if (!('IntersectionObserver' in window)) {
     document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
@@ -123,6 +124,54 @@ function setupCalendar() {
   const sheet = bootstrap.Offcanvas.getOrCreateInstance(sheetEl);
   sheetEl.querySelectorAll('.sheet-option').forEach(option => {
     option.addEventListener('click', () => sheet.hide());
+  });
+}
+
+// Form buttons stay disabled until data-abre (ISO date with the -03:00 Brasília offset).
+// Before that, the countdown in data-contagem is shown; at zero the button gets its
+// href and the countdown is hidden. Comparing epoch times makes it right in any time zone.
+function setupCountdowns() {
+  const pad = n => String(n).padStart(2, '0');
+
+  document.querySelectorAll('[data-abre]').forEach(button => {
+    const opensAt = new Date(button.dataset.abre).getTime();
+    const box = document.getElementById(button.dataset.contagem);
+    if (isNaN(opensAt)) {
+      console.warn('Invalid data-abre:', button.dataset.abre);
+      return;
+    }
+
+    const enable = () => {
+      button.href = button.dataset.href;
+      button.classList.remove('disabled');
+      button.removeAttribute('aria-disabled');
+      if (box) box.hidden = true;
+    };
+
+    if (Date.now() >= opensAt) {
+      enable();
+      return;
+    }
+    if (!box) return;
+
+    const units = {};
+    box.querySelectorAll('[data-unit]').forEach(el => { units[el.dataset.unit] = el; });
+    box.hidden = false;
+
+    let timer;
+    const tick = () => {
+      const left = Math.max(0, Math.ceil((opensAt - Date.now()) / 1000));
+      units.d.textContent = pad(Math.floor(left / 86400));
+      units.h.textContent = pad(Math.floor(left % 86400 / 3600));
+      units.m.textContent = pad(Math.floor(left % 3600 / 60));
+      units.s.textContent = pad(left % 60);
+      if (left === 0) {
+        clearInterval(timer);
+        enable();
+      }
+    };
+    tick();
+    timer = setInterval(tick, 1000);
   });
 }
 

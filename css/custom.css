@@ -246,15 +246,59 @@ a:hover { color: var(--gold); }
 
 .btn-outline-light-custom:hover { color: #fff; border-color: #fff; transform: translateY(-2px); }
 
-/* Form buttons not open yet: "disabled" shows the "Em breve" label and hides the external-link icon */
-.btn .soon { display: none; }
+/* Countdown until a form opens (js/script.js hides it and enables the button at zero) */
+.countdown { margin-top: 1.75rem; }
+.countdown + .btn { margin-top: 0.75rem !important; }
 
-.btn.disabled .soon {
-  display: inline;
-  margin-left: 0.5rem;
-  font-weight: 400;
+.countdown-label {
+  margin: 0 0 0.6rem;
+  font-size: 0.72rem !important;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold) !important;
 }
 
+.countdown-units {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.6rem 0.25rem;
+  border-radius: 12px;
+  background: var(--cream);
+  border: 1px solid var(--border);
+}
+
+.countdown-unit strong {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  color: var(--navy);
+}
+
+.countdown-unit small {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.countdown-dark { margin-top: 0.5rem; }
+.countdown-dark .countdown-unit { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.12); }
+.countdown-dark .countdown-unit strong { color: #fff; }
+.countdown-dark .countdown-unit small { color: rgba(255, 255, 255, 0.6); }
+
+/* Form buttons not open yet: while "disabled", only "Em breve" shows; once enabled, the label and icon */
+.btn .soon { display: none; }
+.btn.disabled .soon { display: inline; font-weight: 400; }
+.btn.disabled .btn-label,
 .btn.disabled .bi-box-arrow-up-right { display: none; }
 
 .btn-primary-custom.disabled {

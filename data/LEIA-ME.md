@@ -74,6 +74,8 @@ Os demais textos estão no `index.html` (português) e em `js/i18n.js` (inglês)
 
 ## Dicas
 
+- Os botões dos formulários de inscrição e de submissão abrem sozinhos na data do atributo `data-abre` (no `index.html`, formato `2026-10-01T00:00:00-03:00`, horário de Brasília). Até lá mostram "Em breve" e uma contagem regressiva. Para mudar a data de abertura, altere esse atributo e também a linha correspondente em "Datas importantes".
+
 - O botão "Adicionar à agenda" não lê a programação. Se o início ou o fim de algum dia mudar, atualize também `AGENDA` em `js/script.js` (Google Agenda) e `assets/neuromicrobioma-2026.ics` (Apple Calendar / Outlook).
 
 - Valide o JSON antes do commit (ex.: https://jsonlint.com). Uma vírgula sobrando faz a seção voltar para "em breve".
