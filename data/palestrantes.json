@@ -59,7 +59,7 @@
     },
     {
       "id": "roberta-malaguez",
-      "tratamento": { "pt": "Dra.", "en": "Dr." },
+      "tratamento": { "pt": "Esp.", "en": "Spec." },
       "nome": "Roberta Malaguêz",
       "instituicao": "",
       "foto": "assets/palestrantes/roberta-malaguez.jpeg",
