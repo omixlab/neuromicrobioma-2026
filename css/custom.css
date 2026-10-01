@@ -557,6 +557,43 @@ section .lead-text { color: var(--navy); }
   background: linear-gradient(160deg, #fff 0%, var(--gold-soft) 140%);
 }
 
+/* Warning box (e.g. "submission requires registration") */
+.notice {
+  display: flex;
+  gap: 1rem;
+  max-width: 860px;
+  margin: 0 auto 2.5rem;
+  padding: 1.1rem 1.4rem;
+  background: #fbf1de;
+  border: 1px solid rgba(179, 135, 58, 0.35);
+  border-left: 4px solid var(--gold);
+  border-radius: 14px;
+}
+
+.section-head + .notice { margin-top: -1.5rem; }
+
+.notice > .bi {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #a8741f;
+}
+
+.notice-title {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a5f19;
+}
+
+.notice p {
+  font-size: 0.95rem;
+  color: var(--navy) !important;
+}
+
 .placeholder-card {
   display: flex;
   align-items: center;

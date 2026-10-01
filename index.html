@@ -85,12 +85,12 @@
               </button>
             </li>
             <li><i class="bi bi-geo-alt"></i> <span data-i18n="hero.place">UFPel · Campus Capão do Leão, RS</span></li>
-            <li><i class="bi bi-ticket-perforated"></i> <span data-i18n="hero.free">Inscrição gratuita · vagas limitadas</span></li>
+            <li><i class="bi bi-ticket-perforated"></i> <span data-i18n="hero.free">Inscrição gratuita · vagas esgotadas</span></li>
           </ul>
 
           <div class="d-flex flex-wrap gap-3">
             <a href="#inscricao" class="btn btn-primary-custom">
-              <span data-i18n="hero.cta">Inscreva-se</span> <i class="bi bi-arrow-right ms-1"></i>
+              <span data-i18n="hero.cta">Inscrições</span> <i class="bi bi-arrow-right ms-1"></i>
             </a>
             <a href="#submissao" class="btn btn-ghost" data-i18n="hero.cta2">Chamada de trabalhos</a>
           </div>
@@ -187,6 +187,14 @@
         <p class="section-subtitle" data-i18n="submissao.subtitle">São bem-vindos trabalhos de graduação, iniciação científica, pós-graduação, pesquisa e extensão, inclusive os que não avaliam diretamente o microbioma. <strong>A submissão é feita em formulário próprio, separado da inscrição.</strong></p>
       </div>
 
+      <div class="notice reveal" role="note">
+        <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+        <div>
+          <strong class="notice-title" data-i18n="submissao.avisoTitulo">Atenção</strong>
+          <p class="mb-0" data-i18n="submissao.aviso">A submissão de trabalhos é exclusiva para participantes previamente <a href="#inscricao">inscritos</a> no NeuroMicrobioma 2026. Cada trabalho deverá ter pelo menos um autor inscrito no evento, que será responsável pela apresentação.</p>
+        </div>
+      </div>
+
       <div class="row g-4 mb-4">
         <div class="col-md-6 reveal">
           <article class="card-custom">
@@ -237,7 +245,7 @@
             <ul class="check-list">
               <li data-i18n="submissao.n1">Resumo simples, em parágrafo único, com até 300 palavras, em português ou inglês</li>
               <li data-i18n="submissao.n2">3 a 5 palavras-chave; sem tabelas, figuras ou referências</li>
-              <li data-i18n="submissao.n3">Apresentador inscrito no evento, com no máximo 2 trabalhos</li>
+              <li data-i18n="submissao.n3">No máximo 2 trabalhos por apresentador</li>
             </ul>
             <p class="small" data-i18n="submissao.anais">Os resumos aprovados serão publicados nos anais do evento (e-book no Zenodo).</p>
             <div class="countdown countdown-dark" id="contagem-submissao" role="timer" hidden>
@@ -284,7 +292,15 @@
       <div class="section-head reveal">
         <p class="eyebrow" data-i18n="inscricao.eyebrow">Inscrições</p>
         <h2 class="section-title" data-i18n="inscricao.title">Inscrição gratuita</h2>
-        <p class="section-subtitle" data-i18n="inscricao.subtitle"><strong>Inscrições a partir de 1º de outubro.</strong> As vagas são limitadas. O certificado é emitido mediante participação nas atividades do evento e apresentação de trabalhos (pôster ou oral).</p>
+        <p class="section-subtitle" data-i18n="inscricao.subtitle">O certificado é emitido mediante participação nas atividades do evento e apresentação de trabalhos (pôster ou oral).</p>
+      </div>
+
+      <div class="notice reveal" role="note">
+        <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+        <div>
+          <strong class="notice-title" data-i18n="inscricao.esgotadoTitulo">Vagas esgotadas</strong>
+          <p class="mb-0" data-i18n="inscricao.esgotadoAviso">Todas as vagas disponíveis para o NeuroMicrobioma 2026 já foram ocupadas, e as inscrições estão encerradas.</p>
+        </div>
       </div>
 
       <div class="row g-4 align-items-stretch">
@@ -297,20 +313,11 @@
               <li data-i18n="inscricao.s3">Se for apresentar trabalho, envie também o resumo pelo <a href="#submissao">formulário de submissão</a>.</li>
               <li data-i18n="inscricao.s4">Aguarde a confirmação da organização no e-mail informado.</li>
             </ol>
-            <div class="countdown" id="contagem-inscricao" role="timer" hidden>
-              <p class="countdown-label" data-i18n="contagem.inscricao">As inscrições abrem em</p>
-              <div class="countdown-units">
-                <span class="countdown-unit"><strong data-unit="d">00</strong><small data-i18n="contagem.dias">dias</small></span>
-                <span class="countdown-unit"><strong data-unit="h">00</strong><small data-i18n="contagem.horas">horas</small></span>
-                <span class="countdown-unit"><strong data-unit="m">00</strong><small data-i18n="contagem.min">min</small></span>
-                <span class="countdown-unit"><strong data-unit="s">00</strong><small data-i18n="contagem.seg">seg</small></span>
-              </div>
-            </div>
-            <!-- Liberado automaticamente por js/script.js na data de data-abre (horário de Brasília). -->
-            <a data-href="https://forms.gle/zXvV6Z98szhgkkAS8" data-abre="2026-10-01T00:00:00-03:00" data-contagem="contagem-inscricao"
+            <!-- Inscrições encerradas (vagas esgotadas). Para reabrir: troque data-href por href e remova "disabled" e aria-disabled. -->
+            <a data-href="https://forms.gle/zXvV6Z98szhgkkAS8"
                target="_blank" rel="noopener" class="btn btn-primary-custom btn-block-custom disabled" aria-disabled="true">
               <span class="btn-label" data-i18n="inscricao.botao">Abrir formulário de inscrição</span> <i class="bi bi-box-arrow-up-right ms-1"></i>
-              <em class="soon" data-i18n="geral.emBreve">Em breve</em>
+              <em class="soon" data-i18n="inscricao.esgotado">Vagas esgotadas</em>
             </a>
             <p class="note mt-3 text-center" data-i18n="inscricao.nota">O preenchimento do formulário não garante a vaga até a confirmação da organização.</p>
           </div>
