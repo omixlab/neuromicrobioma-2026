@@ -85,12 +85,12 @@
               </button>
             </li>
             <li><i class="bi bi-geo-alt"></i> <span data-i18n="hero.place">UFPel · Campus Capão do Leão, RS</span></li>
-            <li><i class="bi bi-ticket-perforated"></i> <span data-i18n="hero.free">Inscrição gratuita · vagas esgotadas</span></li>
+            <li><i class="bi bi-ticket-perforated"></i> <span data-i18n="hero.free">Inscrição gratuita · 43 novas vagas</span></li>
           </ul>
 
           <div class="d-flex flex-wrap gap-3">
             <a href="#inscricao" class="btn btn-primary-custom">
-              <span data-i18n="hero.cta">Inscrições</span> <i class="bi bi-arrow-right ms-1"></i>
+              <span data-i18n="hero.cta">Inscreva-se</span> <i class="bi bi-arrow-right ms-1"></i>
             </a>
             <a href="#submissao" class="btn btn-ghost" data-i18n="hero.cta2">Chamada de trabalhos</a>
           </div>
@@ -229,6 +229,7 @@
             <h3 class="card-title-custom mt-0" data-i18n="submissao.datas">Datas importantes</h3>
             <ol class="timeline">
               <li><span data-i18n="submissao.d0">Abertura das inscrições</span><strong data-i18n="submissao.d0Data">01/10</strong></li>
+              <li><span data-i18n="submissao.d0b">Reabertura das inscrições (43 novas vagas)</span><strong data-i18n="submissao.d0bData">09/10, 12h</strong></li>
               <li><span data-i18n="submissao.d1">Abertura da submissão de resumos</span><strong data-i18n="submissao.d1Data">06/10</strong></li>
               <li><span data-i18n="submissao.d2">Encerramento da submissão</span><strong data-i18n="submissao.d2Data">20/10, 23h59</strong></li>
               <li><span data-i18n="submissao.d3">Divulgação dos trabalhos aprovados</span><strong data-i18n="submissao.d3Data">26/10</strong></li>
@@ -295,11 +296,11 @@
         <p class="section-subtitle" data-i18n="inscricao.subtitle">O certificado é emitido mediante participação nas atividades do evento e apresentação de trabalhos (pôster ou oral).</p>
       </div>
 
-      <div class="notice reveal" role="note">
-        <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+      <div class="notice notice-info reveal" role="note">
+        <i class="bi bi-megaphone-fill" aria-hidden="true"></i>
         <div>
-          <strong class="notice-title" data-i18n="inscricao.esgotadoTitulo">Vagas esgotadas</strong>
-          <p class="mb-0" data-i18n="inscricao.esgotadoAviso">Todas as vagas disponíveis para o NeuroMicrobioma 2026 já foram ocupadas, e as inscrições estão encerradas.</p>
+          <strong class="notice-title" data-i18n="inscricao.vagasTitulo">43 novas vagas</strong>
+          <p class="mb-0" data-i18n="inscricao.vagasAviso">Com a mudança do evento para o <a href="#local">Anfiteatro da FAEM</a>, 43 novas vagas foram disponibilizadas. As inscrições reabrem em 9 de outubro, ao meio-dia (horário de Brasília).</p>
         </div>
       </div>
 
@@ -313,11 +314,20 @@
               <li data-i18n="inscricao.s3">Se for apresentar trabalho, envie também o resumo pelo <a href="#submissao">formulário de submissão</a>.</li>
               <li data-i18n="inscricao.s4">Aguarde a confirmação da organização no e-mail informado.</li>
             </ol>
-            <!-- Inscrições encerradas (vagas esgotadas). Para reabrir: troque data-href por href e remova "disabled" e aria-disabled. -->
-            <a data-href="https://forms.gle/zXvV6Z98szhgkkAS8"
+            <div class="countdown" id="contagem-inscricao" role="timer" hidden>
+              <p class="countdown-label" data-i18n="contagem.inscricao">As inscrições reabrem em</p>
+              <div class="countdown-units">
+                <span class="countdown-unit"><strong data-unit="d">00</strong><small data-i18n="contagem.dias">dias</small></span>
+                <span class="countdown-unit"><strong data-unit="h">00</strong><small data-i18n="contagem.horas">horas</small></span>
+                <span class="countdown-unit"><strong data-unit="m">00</strong><small data-i18n="contagem.min">min</small></span>
+                <span class="countdown-unit"><strong data-unit="s">00</strong><small data-i18n="contagem.seg">seg</small></span>
+              </div>
+            </div>
+            <!-- Liberado automaticamente por js/script.js na data de data-abre (horário de Brasília). -->
+            <a data-href="https://forms.gle/zXvV6Z98szhgkkAS8" data-abre="2026-10-09T12:00:00-03:00" data-contagem="contagem-inscricao"
                target="_blank" rel="noopener" class="btn btn-primary-custom btn-block-custom disabled" aria-disabled="true">
               <span class="btn-label" data-i18n="inscricao.botao">Abrir formulário de inscrição</span> <i class="bi bi-box-arrow-up-right ms-1"></i>
-              <em class="soon" data-i18n="inscricao.esgotado">Vagas esgotadas</em>
+              <em class="soon" data-i18n="geral.emBreve">Em breve</em>
             </a>
             <p class="note mt-3 text-center" data-i18n="inscricao.nota">O preenchimento do formulário não garante a vaga até a confirmação da organização.</p>
           </div>
@@ -355,28 +365,29 @@
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow" data-i18n="local.eyebrow">Local do evento</p>
-        <h2 class="section-title" data-i18n="local.title">Auditório de Meteorologia</h2>
-        <p class="section-subtitle" data-i18n="local.subtitle">Universidade Federal de Pelotas — Campus Capão do Leão, RS</p>
+        <h2 class="section-title" data-i18n="local.title">Anfiteatro da FAEM</h2>
+        <p class="section-subtitle" data-i18n="local.subtitle">Faculdade de Agronomia Eliseu Maciel — UFPel, Campus Capão do Leão, RS</p>
       </div>
 
       <div class="row g-4 align-items-stretch">
         <div class="col-lg-5 reveal">
           <div class="card-custom">
             <!-- Click opens the directions app chooser (js/script.js); without JS it opens Google Maps.
-                 TODO: replace lat/lng (campus entrance) with the exact building coordinates, here and in href. -->
+                 lat/lng = Google Maps point for the Faculdade de Agronomia Eliseu Maciel (FAEM); used by
+                 Google Maps, Apple Maps, Waze, Uber and the calendar. Keep in sync with assets/neuromicrobioma-2026.ics. -->
             <a class="info-row address-row" id="enderecoLink"
-               href="https://www.google.com/maps/dir/?api=1&amp;destination=-31.8048895,-52.4130666"
+               href="https://www.google.com/maps/dir/?api=1&amp;destination=-31.8015876,-52.4149572"
                target="_blank" rel="noopener"
-               data-lat="-31.8048895" data-lng="-52.4130666"
-               data-nome="Auditório de Meteorologia — UFPel"
-               data-endereco="Av. Eliseu Maciel, Campus Capão do Leão, Capão do Leão - RS"
-               aria-label="Endereço: Auditório de Meteorologia, UFPel, Campus Capão do Leão. Abrir opções de rota"
+               data-lat="-31.8015876" data-lng="-52.4149572"
+               data-nome="Anfiteatro da FAEM — UFPel"
+               data-endereco="Faculdade de Agronomia Eliseu Maciel, Av. Eliseu Maciel, s/n, Campus Capão do Leão, Capão do Leão - RS, 96160-000"
+               aria-label="Endereço: Anfiteatro da Faculdade de Agronomia Eliseu Maciel, UFPel, Campus Capão do Leão. Abrir opções de rota"
                data-i18n-attr="aria-label:local.enderecoAria">
               <i class="bi bi-geo-alt"></i>
               <div>
                 <h3 data-i18n="local.endereco">Endereço</h3>
-                <p class="address-name" data-i18n="local.auditorio">Auditório de Meteorologia</p>
-                <p data-i18n="local.enderecoLinhas">UFPel — Campus Capão do Leão<br>Av. Eliseu Maciel · Capão do Leão&nbsp;–&nbsp;RS</p>
+                <p class="address-name" data-i18n="local.auditorio">Anfiteatro da Faculdade de Agronomia Eliseu Maciel (FAEM)</p>
+                <p data-i18n="local.enderecoLinhas">UFPel — Campus Capão do Leão<br>Av. Eliseu Maciel, s/n · Capão do Leão&nbsp;–&nbsp;RS</p>
               </div>
               <i class="bi bi-chevron-right address-chevron"></i>
             </a>
@@ -427,8 +438,8 @@
         <div class="col-lg-7 reveal">
           <div class="map-frame">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13576.840673419996!2d-52.42000000000001!3d-31.780000000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9511b5e5a2b3b895%3A0x868b4d834bc6d3e8!2sUniversidade%20Federal%20de%20Pelotas%20-%20Campus%20Cap%C3%A3o%20do%20Le%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
-              title="Mapa do Campus Capão do Leão"
+              src="https://maps.google.com/maps?q=Faculdade+de+Agronomia+Eliseu+Maciel+-+FAEM,+Cap%C3%A3o+do+Le%C3%A3o+-+RS&amp;z=16&amp;hl=pt-BR&amp;output=embed"
+              title="Mapa da Faculdade de Agronomia Eliseu Maciel (FAEM)"
               data-i18n-attr="title:local.mapa;src:local.mapaSrc"
               allowfullscreen=""
               loading="lazy"
@@ -571,7 +582,7 @@
     <div class="offcanvas-header">
       <div>
         <h2 class="offcanvas-title" id="rotaSheetLabel" data-i18n="local.comoChegar">Como chegar</h2>
-        <p class="sheet-sub" data-i18n="local.sheetSub">Auditório de Meteorologia — UFPel</p>
+        <p class="sheet-sub" data-i18n="local.sheetSub">Anfiteatro da FAEM — UFPel, Campus Capão do Leão</p>
       </div>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fechar" data-i18n-attr="aria-label:geral.fechar"></button>
     </div>

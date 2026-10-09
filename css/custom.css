@@ -594,6 +594,16 @@ section .lead-text { color: var(--navy); }
   color: var(--navy) !important;
 }
 
+/* Good-news variant (sage, from the logo) */
+.notice-info {
+  background: #eaf2ef;
+  border-color: rgba(127, 163, 156, 0.45);
+  border-left-color: var(--sage);
+}
+
+.notice-info > .bi { color: #4f7d74; }
+.notice-info .notice-title { color: #3f6b62; }
+
 .placeholder-card {
   display: flex;
   align-items: center;

@@ -6,13 +6,15 @@ METHOD:PUBLISH
 X-WR-CALNAME:NeuroMicrobioma 2026
 BEGIN:VEVENT
 UID:neuromicrobioma-2026-dia-1@omixlab.github.io
-DTSTAMP:20260924T000000Z
+SEQUENCE:1
+DTSTAMP:20261009T144201Z
 DTSTART:20261117T153000Z
 DTEND:20261117T203000Z
 SUMMARY:NeuroMicrobioma 2026 — Dia 1
-LOCATION:Auditório de Meteorologia — UFPel\, Av. Eliseu Maciel\, Campus 
- Capão do Leão\, Capão do Leão - RS\, Brasil
-GEO:-31.8048895;-52.4130666
+LOCATION:Anfiteatro da Faculdade de Agronomia Eliseu Maciel (FAEM) — UFPe
+ l\, Av. Eliseu Maciel\, s/n\, Campus Capão do Leão\, Capão do Leão - R
+ S\, 96160-000\, Brasil
+GEO:-31.8015876;-52.4149572
 DESCRIPTION:1º Simpósio sobre Microbioma\, Eixo Intestino-Cérebro e Saú
  de Mental.\nProgramação: https://omixlab.github.io/neuromicrobioma-2026/
  #programacao
@@ -20,13 +22,15 @@ URL:https://omixlab.github.io/neuromicrobioma-2026/
 END:VEVENT
 BEGIN:VEVENT
 UID:neuromicrobioma-2026-dia-2@omixlab.github.io
-DTSTAMP:20260924T000000Z
+SEQUENCE:1
+DTSTAMP:20261009T144201Z
 DTSTART:20261118T120000Z
 DTEND:20261118T203000Z
 SUMMARY:NeuroMicrobioma 2026 — Dia 2
-LOCATION:Auditório de Meteorologia — UFPel\, Av. Eliseu Maciel\, Campus 
- Capão do Leão\, Capão do Leão - RS\, Brasil
-GEO:-31.8048895;-52.4130666
+LOCATION:Anfiteatro da Faculdade de Agronomia Eliseu Maciel (FAEM) — UFPe
+ l\, Av. Eliseu Maciel\, s/n\, Campus Capão do Leão\, Capão do Leão - R
+ S\, 96160-000\, Brasil
+GEO:-31.8015876;-52.4149572
 DESCRIPTION:1º Simpósio sobre Microbioma\, Eixo Intestino-Cérebro e Saú
  de Mental.\nProgramação: https://omixlab.github.io/neuromicrobioma-2026/
  #programacao
