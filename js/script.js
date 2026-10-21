@@ -127,51 +127,66 @@ function setupCalendar() {
   });
 }
 
-// Form buttons stay disabled until data-abre (ISO date with the -03:00 Brasília offset).
-// Before that, the countdown in data-contagem is shown; at zero the button gets its
-// href and the countdown is hidden. Comparing epoch times makes it right in any time zone.
+// Form buttons are enabled between data-abre and data-fecha (ISO dates with the -03:00
+// Brasília offset; either is optional). Outside that window the button is disabled; after
+// data-fecha it also gets .closed ("Encerrado"). The countdown in data-contagem runs to the
+// next limit and is hidden when there is none left; if it has .countdown-label[data-fase]
+// elements ("abre" / "fecha"), only the one for the current phase is shown.
+// Comparing epoch times makes it right in any time zone.
 function setupCountdowns() {
   const pad = n => String(n).padStart(2, '0');
 
-  document.querySelectorAll('[data-abre]').forEach(button => {
-    const opensAt = new Date(button.dataset.abre).getTime();
+  document.querySelectorAll('[data-abre], [data-fecha]').forEach(button => {
+    const opensAt = button.dataset.abre ? new Date(button.dataset.abre).getTime() : -Infinity;
+    const closesAt = button.dataset.fecha ? new Date(button.dataset.fecha).getTime() : Infinity;
+    if (isNaN(opensAt) || isNaN(closesAt)) {
+      console.warn('Invalid data-abre / data-fecha:', button.dataset.abre, button.dataset.fecha);
+      return;
+    }
+
     const box = document.getElementById(button.dataset.contagem);
-    if (isNaN(opensAt)) {
-      console.warn('Invalid data-abre:', button.dataset.abre);
-      return;
-    }
-
-    const enable = () => {
-      button.href = button.dataset.href;
-      button.classList.remove('disabled');
-      button.removeAttribute('aria-disabled');
-      if (box) box.hidden = true;
-    };
-
-    if (Date.now() >= opensAt) {
-      enable();
-      return;
-    }
-    if (!box) return;
-
     const units = {};
-    box.querySelectorAll('[data-unit]').forEach(el => { units[el.dataset.unit] = el; });
-    box.hidden = false;
+    const labels = {};
+    if (box) {
+      box.querySelectorAll('[data-unit]').forEach(el => { units[el.dataset.unit] = el; });
+      box.querySelectorAll('[data-fase]').forEach(el => { labels[el.dataset.fase] = el; });
+    }
 
-    let timer;
+    // Returns true while there is still a limit to wait for
     const tick = () => {
-      const left = Math.max(0, Math.ceil((opensAt - Date.now()) / 1000));
-      units.d.textContent = pad(Math.floor(left / 86400));
-      units.h.textContent = pad(Math.floor(left % 86400 / 3600));
-      units.m.textContent = pad(Math.floor(left % 3600 / 60));
-      units.s.textContent = pad(left % 60);
-      if (left === 0) {
-        clearInterval(timer);
-        enable();
+      const now = Date.now();
+      const phase = now < opensAt ? 'abre' : now < closesAt ? 'fecha' : 'fim';
+
+      if (phase === 'fecha') {
+        button.href = button.dataset.href;
+        button.removeAttribute('aria-disabled');
+      } else {
+        button.removeAttribute('href');
+        button.setAttribute('aria-disabled', 'true');
       }
+      button.classList.toggle('disabled', phase !== 'fecha');
+      button.classList.toggle('closed', phase === 'fim');
+
+      const target = phase === 'abre' ? opensAt : closesAt;
+      const counting = phase !== 'fim' && isFinite(target);
+      if (box) {
+        box.hidden = !counting;
+        Object.entries(labels).forEach(([name, el]) => { el.hidden = name !== phase; });
+      }
+      if (!counting) return false;
+
+      if (box) {
+        const left = Math.max(0, Math.ceil((target - now) / 1000));
+        units.d.textContent = pad(Math.floor(left / 86400));
+        units.h.textContent = pad(Math.floor(left % 86400 / 3600));
+        units.m.textContent = pad(Math.floor(left % 3600 / 60));
+        units.s.textContent = pad(left % 60);
+      }
+      return true;
     };
-    tick();
-    timer = setInterval(tick, 1000);
+
+    if (!tick()) return;
+    const timer = setInterval(() => { if (!tick()) clearInterval(timer); }, 1000);
   });
 }
 

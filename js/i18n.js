@@ -96,8 +96,8 @@
     'submissao.d0Data': 'Oct 1',
     'submissao.d0bData': 'Oct 9, noon',
     'submissao.d1Data': 'Oct 6',
-    'submissao.d2Data': 'Oct 20, 11:59 pm',
-    'submissao.d3Data': 'Oct 26',
+    'submissao.d2Data': 'Oct 25, 11:59 pm',
+    'submissao.d3Data': 'From Oct 30',
     'submissao.d4Data': 'Nov 3',
     'submissao.d5Data': 'Nov 17',
     'submissao.d6Data': 'Nov 18',
@@ -179,8 +179,10 @@
 
     'geral.fechar': 'Close',
     'geral.emBreve': 'Coming soon',
+    'geral.encerrado': 'Closed',
 
     'contagem.submissao': 'Abstract submission opens in',
+    'contagem.submissaoFecha': 'Abstract submission closes in',
 
     'contagem.inscricao': 'Registration reopens in',
     'contagem.dias': 'days',

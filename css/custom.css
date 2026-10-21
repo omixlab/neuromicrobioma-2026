@@ -246,7 +246,7 @@ a:hover { color: var(--gold); }
 
 .btn-outline-light-custom:hover { color: #fff; border-color: #fff; transform: translateY(-2px); }
 
-/* Countdown until a form opens (js/script.js hides it and enables the button at zero) */
+/* Countdown until a form opens or closes (js/script.js hides it and flips the button at zero) */
 .countdown { margin-top: 1.75rem; }
 .countdown + .btn { margin-top: 0.75rem !important; }
 
@@ -295,9 +295,12 @@ a:hover { color: var(--gold); }
 .countdown-dark .countdown-unit strong { color: #fff; }
 .countdown-dark .countdown-unit small { color: rgba(255, 255, 255, 0.6); }
 
-/* Form buttons not open yet: while "disabled", only "Em breve" shows; once enabled, the label and icon */
-.btn .soon { display: none; }
+/* Form buttons not open yet: while "disabled", only "Em breve" shows; once enabled, the label and icon.
+   After the deadline (js/script.js adds .closed) it shows "Encerrado" instead. */
+.btn .soon, .btn .ended { display: none; }
 .btn.disabled .soon { display: inline; font-weight: 400; }
+.btn.closed .soon { display: none; }
+.btn.closed .ended { display: inline; font-weight: 400; }
 .btn.disabled .btn-label,
 .btn.disabled .bi-box-arrow-up-right { display: none; }
 
