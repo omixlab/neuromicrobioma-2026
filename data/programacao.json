@@ -66,10 +66,10 @@
       "atividades": [
         {
           "inicio": "09:00", "fim": "10:00", "tipo": "pitch",
-          "titulo": { "pt": "Scientific Pitch — Mestrado", "en": "Scientific Pitch — Master's" },
+          "titulo": { "pt": "Scientific Pitch — Doutorado", "en": "Scientific Pitch — PhD" },
           "descricao": {
-            "pt": "Apresentações de 3 minutos, com um slide estático. Participação de 5 a 6 estudantes selecionados.",
-            "en": "3-minute presentations with a single static slide, by 5 to 6 selected students."
+            "pt": "5 alunos selecionados",
+            "en": "5 selected students"
           }
         },
         {
@@ -89,8 +89,8 @@
           "inicio": "10:55", "fim": "11:55", "tipo": "pitch",
           "titulo": { "pt": "Scientific Pitch — Doutorado", "en": "Scientific Pitch — PhD" },
           "descricao": {
-            "pt": "Apresentações de 3 minutos, com um slide estático. Participação de 5 a 6 estudantes selecionados.",
-            "en": "3-minute presentations with a single static slide, by 5 to 6 selected students."
+            "pt": "5 alunos selecionados",
+            "en": "5 selected students"
           }
         },
         {
